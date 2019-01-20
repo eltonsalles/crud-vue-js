@@ -8,6 +8,11 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    { path: '/login', component: Login },
+    { path: '/login', name: 'login', component: Login },
+    {
+      path: '/esqueceu-sua-senha',
+      name: '/forget-password',
+      component: () => import(/* webpackChunkName: "view-[request]" */ './views/forget-password/ForgetPassword.vue'),
+    },
   ],
 });
