@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Login from './views/login/Login.vue';
+import Home from './views/home/Home.vue';
 
 Vue.use(Router);
+
 
 export default new Router({
   mode: 'history',
@@ -10,16 +12,27 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      redirect: {
+        name: 'login',
+      },
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: { requireAuth: false },
+    },
+    {
+      path: '/esqueceu-sua-senha',
+      name: 'forget-password',
+      component: () => import(/* webpackChunkName: "view-[request]" */ './views/forget-password/ForgetPassword.vue'),
+      meta: { requireAuth: false },
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home,
+      meta: { requireAuth: true },
     },
   ],
 });

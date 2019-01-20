@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'source_sans_problack';
+    src: url('sourcesanspro-black-multi.woff2') format('woff2'),
+         url('sourcesanspro-black-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_problack_italic';
+    src: url('sourcesanspro-blackitalic-multi.woff2') format('woff2'),
+         url('sourcesanspro-blackitalic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_probold';
+    src: url('sourcesanspro-bold-multi.woff2') format('woff2'),
+         url('sourcesanspro-bold-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_probold_italic';
+    src: url('sourcesanspro-bolditalic-multi.woff2') format('woff2'),
+         url('sourcesanspro-bolditalic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proextralight';
+    src: url('sourcesanspro-extralight-multi.woff2') format('woff2'),
+         url('sourcesanspro-extralight-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proXLtIt';
+    src: url('sourcesanspro-extralightitalic-multi.woff2') format('woff2'),
+         url('sourcesanspro-extralightitalic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proitalic';
+    src: url('sourcesanspro-italic-multi.woff2') format('woff2'),
+         url('sourcesanspro-italic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('sourcesanspro-light-multi.woff2') format('woff2'),
+         url('sourcesanspro-light-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_prolight_italic';
+    src: url('sourcesanspro-lightitalic-multi.woff2') format('woff2'),
+         url('sourcesanspro-lightitalic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('sourcesanspro-regular-multi.woff2') format('woff2'),
+         url('sourcesanspro-regular-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_prosemibold';
+    src: url('sourcesanspro-semibold-multi.woff2') format('woff2'),
+         url('sourcesanspro-semibold-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_proSBdIt';
+    src: url('sourcesanspro-semibolditalic-multi.woff2') format('woff2'),
+         url('sourcesanspro-semibolditalic-multi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
