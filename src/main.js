@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store/store';
-import 'interface/dist/style.css';
+import 'normalize.css/normalize.css';
 import './assets/css/style.pcss';
 import './assets/fonts/fonts.css';
 import './assets/icons/style.css';
