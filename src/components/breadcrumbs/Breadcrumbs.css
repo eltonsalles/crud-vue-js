@@ -1,0 +1,27 @@
+@import "../../assets/css/color.css";
+
+.breadcrumbs__title {
+  color: $pf-gray-dark-2;
+  font-size: 23px;
+  margin: 2% 0 0 0;
+}
+
+.breadcrumbs__container {
+  color: $pf-gray-dark-2;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  list-style-type: none;
+  margin: 1% 0 1% 0.5%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:not(:last-of-type) {
+    cursor: pointer;
+  }
+}

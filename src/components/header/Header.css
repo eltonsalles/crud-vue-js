@@ -1,0 +1,127 @@
+@import "../../assets/css/color.css";
+
+.nav {
+  background: $pf-white;
+  border-bottom: 2px solid $pf-purple;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-header,
+.links-user,
+.links-logout {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.links-header__item,
+.links-user__item,
+.links-logout__item {
+  list-style: none;
+}
+
+.links-header__item:not(:first-of-type) {
+  border-image: linear-gradient(to bottom, $pf-white 0, $pf-white 12%, $pf-gray-light 12%, $pf-gray-light 85%, $pf-white 85%, $pf-white 100%) 1 100%;
+  border-right: 1px solid;
+  padding: 12px 0;
+}
+
+  .links-header__item--active,
+  .links-header__item:hover {
+    background-image: url('../../assets/images/arrow.png');
+    background-position: center 101%;
+    background-repeat: no-repeat;
+  }
+
+  .links-header__item--active .links-header__link,
+  .links-header__item:hover .links-header__link {
+    color: $pf-purple;
+  }
+
+.links-header__link {
+  align-items: center;
+  color: $pf-gray;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 8px;
+  text-decoration: none;
+}
+
+.links-header__link-img {
+  background: $pf-purple;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  padding: 10px 40px 10px 10px;
+}
+
+.links-header__img {
+  height: auto;
+  max-height: 75px;
+  max-width: 175px;
+  width: 100%;
+}
+
+.links-header__icon {
+  font-size: 32px;
+  padding: 8px 0 4px;
+}
+
+.links-header__text {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.links-user {
+  margin-right: 32px;
+}
+
+.links-user__name,
+.links-user__office {
+  margin: 0;
+  padding: 0 8px;
+  text-align: right;
+}
+
+.links-user__name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.links-user__office {
+  font-size: 8px;
+}
+
+.links-user__link {
+  color: $pf-gray;
+  text-decoration: none;
+}
+
+.links-user__item--logout {
+  position: relative;
+}
+
+.links-user__img {
+  height: auto;
+  max-height: 50px;
+  max-width: 50px;
+  width: 100%;
+}
+
+.links-logout {
+  align-items: center;
+  display: none;
+  height: 48px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100%;
+
+  &.links-logout--visible {
+    display: flex;
+  }
+}

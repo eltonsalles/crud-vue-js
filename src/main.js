@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store/store';
 import 'normalize.css/normalize.css';
-import './assets/css/style.pcss';
+import './assets/css/style.css';
 import './assets/fonts/fonts.css';
 import './assets/icons/style.css';
 

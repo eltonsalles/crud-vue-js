@@ -1,13 +1,21 @@
 <template>
-  <h1>Home</h1>
+  <div>
+    <m-breadcrumbs></m-breadcrumbs>
+  </div>
 </template>
 
 <script>
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs.vue';
+
 export default {
   name: 'Home',
+
+  components: {
+    'm-breadcrumbs': Breadcrumbs,
+  },
 };
 </script>
 
 <style lang="postcss" scoped>
-  @import "Home.pcss";
+  @import "Home.css";
 </style>

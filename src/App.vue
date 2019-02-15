@@ -31,10 +31,6 @@ export default {
 </script>
 
 <style lang="postcss">
-  .header {
-    width: 100%;
-  }
-
   .content-login {
     width: 100%;
   }

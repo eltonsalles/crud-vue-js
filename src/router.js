@@ -32,7 +32,23 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home,
-      meta: { requireAuth: true },
+      meta: {
+        requireAuth: true,
+        breadcrumbs: [
+          {
+            name: 'Home',
+            link: '',
+          },
+          {
+            name: 'Faculdade',
+            link: '',
+          },
+          {
+            name: 'Nova Faculdade',
+            title: 'Nova Faculdades',
+          },
+        ],
+      },
     },
   ],
 });

@@ -2,7 +2,10 @@ module.exports = {
   plugins: {
     'postcss-import': {},
     autoprefixer: {},
-    'postcss-pxtorem': { propList: ['font', 'font-size', 'line-height', 'letter-spacing'] },
+    'postcss-simple-vars': {},
+    'postcss-nested': {},
+    'postcss-mixins': {},
     'postcss-extend': {},
+    'postcss-pxtorem': { propList: ['font', 'font-size', 'line-height', 'letter-spacing'] },
   },
 };
