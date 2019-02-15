@@ -1,6 +1,8 @@
 @import "../../assets/css/color.css";
 
 .nav {
+  background: $pf-white;
+  border-bottom: 2px solid $pf-purple;
   display: flex;
   justify-content: space-between;
 }
@@ -21,8 +23,17 @@
 }
 
 .links-header__item:not(:first-of-type) {
-  border-right: 1px solid $pf-gray-light;
+  border-image: linear-gradient(to bottom, $pf-white 0, $pf-white 12%, $pf-gray-light 12%, $pf-gray-light 85%, $pf-white 85%, $pf-white 100%) 1 100%;
+  border-right: 1px solid;
+  padding: 12px 0;
 }
+
+  .links-header__item--active,
+  .links-header__item:hover {
+    background-image: url('../../assets/images/arrow.png');
+    background-position: center 101%;
+    background-repeat: no-repeat;
+  }
 
   .links-header__item--active .links-header__link,
   .links-header__item:hover .links-header__link {
@@ -42,7 +53,7 @@
   background: $pf-purple;
   border-bottom-right-radius: 50px;
   display: flex;
-  padding: 20px 40px 20px 20px;
+  padding: 10px 40px 10px 10px;
 }
 
 .links-header__img {
@@ -63,14 +74,14 @@
 }
 
 .links-user {
-  margin-right: 16px;
+  margin-right: 32px;
 }
 
 .links-user__name,
 .links-user__office {
   margin: 0;
-  text-align: right;
   padding: 0 8px;
+  text-align: right;
 }
 
 .links-user__name {
@@ -83,13 +94,13 @@
 }
 
 .links-user__link {
-  text-decoration: none;
   color: $pf-gray;
+  text-decoration: none;
 }
 
-  .links-user__item--logout {
-    position: relative;
-  }
+.links-user__item--logout {
+  position: relative;
+}
 
 .links-user__img {
   height: auto;

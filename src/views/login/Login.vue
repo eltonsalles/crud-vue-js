@@ -81,5 +81,5 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-  @import "Login.pcss";
+  @import "Login.css";
 </style>

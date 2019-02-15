@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-  @import "Header.pcss";
+  @import "Header.css";
 </style>

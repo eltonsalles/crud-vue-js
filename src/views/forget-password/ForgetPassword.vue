@@ -45,5 +45,5 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-  @import "ForgetPassword.pcss";
+  @import "ForgetPassword.css";
 </style>
