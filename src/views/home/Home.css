@@ -1,0 +1,5 @@
+@import "../../assets/css/color.css";
+
+.home {
+  background: $pf-white;
+}

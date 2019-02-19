@@ -1,0 +1,40 @@
+@import "../../assets/css/color.css";
+
+$triangle: 21px;
+
+.wildcard {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wildcard__item {
+  align-items: center;
+  background: $pf-white;
+  border-bottom: 1px solid $pf-purple;
+  color: $pf-purple;
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  width: 25%;
+}
+
+.wildcard__item:first-of-type {
+  border-top-left-radius: 5px;
+}
+
+  .wildcard__item--active {
+    background: $pf-purple;
+    color: $pf-white;
+    position: relative;
+  }
+
+  .wildcard__item--active:after {
+    position: absolute;
+    right: -$triangle;
+    content: "";
+    border-top: $triangle solid transparent;
+    border-bottom: $triangle solid transparent;
+    border-left: $triangle solid $pf-purple;
+  }

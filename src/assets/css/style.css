@@ -89,6 +89,7 @@ body {
 
 /* Layout */
 .container-fluid {
+  background: #F8F8F8;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
