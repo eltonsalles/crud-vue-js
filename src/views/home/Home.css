@@ -25,7 +25,7 @@
 }
 
 .company-data__title--not-margin {
-  margin: 0;
+  margin-top: 0;
 }
 
 /* Ajustes para os inputs na home */
@@ -45,7 +45,6 @@
 
 .form-group {
   display: flex;
-  justify-content: center;
 }
 
 .form-group .input-group:not(:last-of-type) {

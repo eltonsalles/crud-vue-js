@@ -148,6 +148,12 @@
           </div>
           <section class="select-product">
             <h4 class="company-data__title company-data__title--not-margin">Selecionar produto</h4>
+            <div class="form-group">
+              <m-checkbox label="Sem juros"></m-checkbox>
+              <m-checkbox label="Gestão"></m-checkbox>
+              <m-checkbox label="Financie 50%"></m-checkbox>
+              <m-checkbox label="Financie 25%"></m-checkbox>
+            </div>
           </section>
         </section>
       </section>
@@ -158,6 +164,7 @@
 <script>
 import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs.vue';
 import Wildcard from '../../components/wildcard/Wildcard.vue';
+import Checkbox from '../../components/checkbox/Checkbox.vue';
 
 export default {
   name: 'Home',
@@ -165,6 +172,7 @@ export default {
   components: {
     'm-breadcrumbs': Breadcrumbs,
     'm-wildcard': Wildcard,
+    'm-checkbox': Checkbox,
   },
 
   data() {
