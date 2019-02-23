@@ -3,3 +3,65 @@
 .home {
   background: $pf-white;
 }
+
+.company-data {
+  display: flex;
+}
+
+.company-data__general,
+.company-data__address {
+  background: $pf-white;
+  flex: 1 50%;
+  padding: 0 20px;
+}
+
+.company-data__general {
+  background: rgba(230, 230, 230, .16);
+}
+
+.company-data__title {
+  color: $pf-purple;
+  font-weight: normal;
+}
+
+.company-data__title--not-margin {
+  margin: 0;
+}
+
+/* Ajustes para os inputs na home */
+.input-group {
+  margin-bottom: 32px;
+}
+
+.input-group__field {
+  border-color: $pf-gray-light;
+  height: 42px;
+}
+
+.input-group__label {
+  color: $pf-gray;
+  top: 12px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group .input-group:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+.form-group .input-group {
+  margin-top: 0;
+}
+
+.input-group--size-3 {
+  flex: 3;
+}
+
+.input-group--size-1 {
+  flex: 1;
+}
+
+/* Fim Ajustes para os inputs na home */
