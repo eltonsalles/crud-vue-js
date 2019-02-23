@@ -1,3 +1,19 @@
+:root {
+  --gray-light-2: #F8F8F8;
+  --gray-light: #E6E6E6;
+  --gray: #ABABAC;
+  --gray-dark: #4D4F5C;
+  --gray-dark-2: #484848;
+  --gray-dark-3: #212121;
+
+  --green: #A7D69B;
+
+  --purple: #9C79B9;
+  --purple-dark: #6D2795;
+
+  --white: #FFFFFF;
+}
+
 /* Fontes */
 body {
   font-family: 'source_sans_proregular', sans-serif;
@@ -94,25 +110,25 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1366px;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .header {
-  width: 100%;
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.16);
+  width: 100%;
 }
 
 .sidebar {
-  width: 12%;
-  height: 100vh;
   box-shadow: 5px -2px 6px 0 rgba(0, 0, 0, 0.16);
+  height: 100vh;
+  width: 12%;
 }
 
 .content {
   box-sizing: border-box;
-  width: 88%;
   padding: 0 32px;
+  width: 88%;
 }
 
 /* Fim layout */

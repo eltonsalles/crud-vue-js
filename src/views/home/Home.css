@@ -1,7 +1,5 @@
-@import "../../assets/css/color.css";
-
 .home {
-  background: $pf-white;
+  background: var(--white);
 }
 
 .company-data {
@@ -10,7 +8,7 @@
 
 .company-data__general,
 .company-data__address {
-  background: $pf-white;
+  background: var(--white);
   flex: 1 50%;
   padding: 0 20px;
 }
@@ -20,7 +18,7 @@
 }
 
 .company-data__title {
-  color: $pf-purple;
+  color: var(--purple);
   font-weight: normal;
 }
 
@@ -34,12 +32,12 @@
 }
 
 .input-group__field {
-  border-color: $pf-gray-light;
+  border-color: var(--gray-light);
   height: 42px;
 }
 
 .input-group__label {
-  color: $pf-gray;
+  color: var(--gray);
   top: 12px;
 }
 

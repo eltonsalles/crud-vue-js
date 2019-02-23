@@ -1,5 +1,4 @@
-@import "../../assets/css/color.css";
-
+/* Variáveis */
 $triangle: 21px;
 
 .wildcard {
@@ -11,9 +10,9 @@ $triangle: 21px;
 
 .wildcard__item {
   align-items: center;
-  background: $pf-white;
-  border-bottom: 1px solid $pf-purple;
-  color: $pf-purple;
+  background: var(--white);
+  border-bottom: 1px solid var(--purple);
+  color: var(--purple);
   display: flex;
   height: 42px;
   justify-content: center;
@@ -25,8 +24,8 @@ $triangle: 21px;
 }
 
   .wildcard__item--active {
-    background: $pf-purple;
-    color: $pf-white;
+    background: var(--purple);
+    color: var(--white);
     position: relative;
   }
 
@@ -36,5 +35,5 @@ $triangle: 21px;
     content: "";
     border-top: $triangle solid transparent;
     border-bottom: $triangle solid transparent;
-    border-left: $triangle solid $pf-purple;
+    border-left: $triangle solid var(--purple);
   }

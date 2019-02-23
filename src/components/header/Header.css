@@ -1,8 +1,6 @@
-@import "../../assets/css/color.css";
-
 .nav {
-  background: $pf-white;
-  border-bottom: 2px solid $pf-purple;
+  background: var(--white);
+  border-bottom: 2px solid var(--purple);
   display: flex;
   justify-content: space-between;
 }
@@ -23,7 +21,7 @@
 }
 
 .links-header__item:not(:first-of-type) {
-  border-image: linear-gradient(to bottom, $pf-white 0, $pf-white 12%, $pf-gray-light 12%, $pf-gray-light 85%, $pf-white 85%, $pf-white 100%) 1 100%;
+  border-image: linear-gradient(to bottom, var(--white) 0, var(--white) 12%, var(--gray-light) 12%, var(--gray-light) 85%, var(--white) 85%, var(--white) 100%) 1 100%;
   border-right: 1px solid;
   padding: 12px 0;
 }
@@ -37,12 +35,12 @@
 
   .links-header__item--active .links-header__link,
   .links-header__item:hover .links-header__link {
-    color: $pf-purple;
+    color: var(--purple);
   }
 
 .links-header__link {
   align-items: center;
-  color: $pf-gray;
+  color: var(--gray);
   display: flex;
   flex-direction: column;
   padding: 0 16px 8px;
@@ -50,7 +48,7 @@
 }
 
 .links-header__link-img {
-  background: $pf-purple;
+  background: var(--purple);
   border-bottom-right-radius: 50px;
   display: flex;
   padding: 10px 40px 10px 10px;
@@ -94,7 +92,7 @@
 }
 
 .links-user__link {
-  color: $pf-gray;
+  color: var(--gray);
   text-decoration: none;
 }
 
