@@ -62,3 +62,13 @@
 }
 
 /* Fim Ajustes para os inputs na home */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.actions > .btn:not(:last-of-type) {
+  margin-right: 6px;
+}
