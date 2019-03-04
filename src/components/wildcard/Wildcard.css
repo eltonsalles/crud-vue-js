@@ -27,10 +27,27 @@ $triangle: 21px;
   margin-right: 20px;
 }
 
+  .wildcard__item--previous {
+    background: var(--purple-dark);
+    color: var(--white);
+    position: relative;
+    z-index: 3;
+  }
+
+  .wildcard__item--previous:after {
+    position: absolute;
+    right: -$triangle;
+    content: "";
+    border-top: $triangle solid transparent;
+    border-bottom: $triangle solid transparent;
+    border-left: $triangle solid var(--purple-dark);
+  }
+
   .wildcard__item--active {
     background: var(--purple);
     color: var(--white);
     position: relative;
+    z-index: 2;
   }
 
   .wildcard__item--active:after {
