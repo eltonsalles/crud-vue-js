@@ -195,13 +195,16 @@ body {
 /* Botões */
 a.btn {
   align-items: center;
-  background: #9C79B9;
+  background: #6D2795;
+  border: none;
   border-radius: 5px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: flex;
+  height: 50px;
   justify-content: center;
+  outline: none;
   padding: 4px 20px;
   text-align: center;
   text-decoration: none;
@@ -224,7 +227,8 @@ button.btn {
   text-transform: uppercase;
 }
 
-a.btn--floating, button.btn--floating {
+a.btn--floating,
+button.btn--floating {
   align-items: center;
   border-radius: 50%;
   display: flex;
@@ -236,38 +240,46 @@ a.btn--floating, button.btn--floating {
   width: 42px;
 }
 
-a.btn--small, button.btn--small {
+a.btn--small,
+button.btn--small {
   font-size: 0.875em;
   height: 24px;
   line-height: 24;
   width: 24px;
 }
 
-a.btn--rounded-edges, button.btn--rounded-edges {
+a.btn--rounded-edges,
+button.btn--rounded-edges {
   border-radius: 21px;
   padding: 11px 32px;
 }
 
-a.btn--info, button.btn--info {
+a.btn--info,
+button.btn--info {
   background: #6A72D9;
 }
 
-a.btn--danger, button.btn--danger {
+a.btn--danger,
+button.btn--danger {
   background: #CE2E2E;
 }
 
+a.btn i.icon-left,
 button.btn i.icon-left {
   padding-right: 10px;
 }
 
+a.btn i.icon-right,
 button.btn i.icon-right {
   padding-left: 10px;
 }
 
+a.btn.btn--come-back,
 button.btn.btn--come-back {
   background: var(--gray-light-3);
 }
 
+a.btn.btn--next,
 button.btn.btn--next {
   background: var(--green);
 }
