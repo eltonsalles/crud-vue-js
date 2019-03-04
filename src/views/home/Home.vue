@@ -156,10 +156,12 @@
             </div>
           </section>
           <section class="actions">
-            <button
-                class="btn"><i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar</button>
-            <button
-                class="btn">Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i></button>
+            <button class="btn btn--come-back">
+              <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+            </button>
+            <button class="btn btn--next">
+              Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+            </button>
           </section>
         </section>
       </section>

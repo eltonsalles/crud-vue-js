@@ -23,6 +23,10 @@ $triangle: 21px;
   border-top-left-radius: 5px;
 }
 
+.wildcard__item:last-of-type {
+  margin-right: 20px;
+}
+
   .wildcard__item--active {
     background: var(--purple);
     color: var(--white);
