@@ -4,7 +4,8 @@
         class="links-aside__item"
         tag="li"
         to="/home"
-        exact-active-class="links-aside__item--active">
+        exact-active-class="links-aside__item--active"
+        @click.native="changeWildcardActive(0)">
       <a href="#" class="links-aside__link">
         <i class="links-aside__icon icon-list"></i>
         <span class="links-aside__text">Lista de Faculdades</span>
@@ -37,8 +38,14 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Aside',
+
+  methods: {
+    ...mapActions(['changeWildcardActive']),
+  },
 };
 </script>
 

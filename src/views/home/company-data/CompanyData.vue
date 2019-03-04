@@ -155,7 +155,7 @@
         <a class="btn btn--come-back">
           <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
         </a>
-        <router-link class="btn btn--next" to="/home/campus">
+        <router-link class="btn btn--next" :to="{ name: 'campus' }" @click.native="changeWildcardActive(1)">
           Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
         </router-link>
       </section>
@@ -164,6 +164,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 import Checkbox from '../../../components/checkbox/Checkbox.vue';
 
 export default {
@@ -191,6 +193,10 @@ export default {
         state: null,
       },
     };
+  },
+
+  methods: {
+    ...mapActions(['changeWildcardActive']),
   },
 };
 </script>
