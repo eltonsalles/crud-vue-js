@@ -4,7 +4,7 @@
         class="links-aside__item"
         tag="li"
         to="/home"
-        exact-active-class="links-aside__item--active"
+        active-class="links-aside__item--active"
         @click.native="changeWildcardActive(0)">
       <a href="#" class="links-aside__link">
         <i class="links-aside__icon icon-list"></i>
