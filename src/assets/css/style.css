@@ -284,6 +284,13 @@ button.btn.btn--next {
   background: var(--green);
 }
 
+a.btn.btn--outline,
+button.btn.btn--outline {
+  background: var(--white);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
 /* Fim botões */
 
 /* Inputs */
@@ -342,6 +349,7 @@ button.btn.btn--next {
   margin-right: 16px;
 }
 
+.input-group--not-margin-top,
 .form-group .input-group {
   margin-top: 0;
 }
