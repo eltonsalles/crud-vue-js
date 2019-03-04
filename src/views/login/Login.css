@@ -63,3 +63,19 @@
   width: 40%;
 }
 
+/* Ajustes Input Login */
+.input-group {
+  margin: 16px 0;
+}
+
+.input-group__field {
+  border-color: #43425D;
+  height: 56px;
+}
+
+.input-group__label {
+  color: #6D2795;
+  top: 17px;
+}
+
+/* Fim Ajustes input login */

@@ -68,7 +68,7 @@ export default {
         // Quando feito esse serviço talvez seja necessário salvar os dados no localstorage
         if (this.user.username === 'admin' && this.user.password === 'admin') {
           this.setAuthenticate();
-          this.$router.replace({ name: 'home' });
+          this.$router.replace({ name: 'company-data' });
         } else {
           console.log('Login e/ou senha inválidos');
         }

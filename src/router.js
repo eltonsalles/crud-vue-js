@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/login/Login.vue';
 import Home from './views/home/Home.vue';
+import CompanyData from './views/home/company-data/CompanyData.vue';
 
 Vue.use(Router);
 
@@ -30,25 +31,31 @@ export default new Router({
     },
     {
       path: '/home',
-      name: 'home',
       component: Home,
-      meta: {
-        requireAuth: true,
-        breadcrumbs: [
-          {
-            name: 'Home',
-            link: '',
+      children: [
+        {
+          path: '',
+          name: 'company-data',
+          component: CompanyData,
+          meta: {
+            requireAuth: true,
+            breadcrumbs: [
+              {
+                name: 'Home',
+                link: '',
+              },
+              {
+                name: 'Faculdade',
+                link: '',
+              },
+              {
+                name: 'Nova Faculdade',
+                title: 'Nova Faculdades',
+              },
+            ],
           },
-          {
-            name: 'Faculdade',
-            link: '',
-          },
-          {
-            name: 'Nova Faculdade',
-            title: 'Nova Faculdades',
-          },
-        ],
-      },
+        },
+      ],
     },
   ],
 });
