@@ -7,10 +7,15 @@
   --gray-dark-2: #484848;
   --gray-dark-3: #212121;
 
+  --light: #F7F7F7;
+
   --green: #A7D69B;
 
   --purple: #9C79B9;
   --purple-dark: #6D2795;
+  --purple-dark-2: #43425D;
+
+  --red: #CE2E2E;
 
   --white: #FFFFFF;
 }
