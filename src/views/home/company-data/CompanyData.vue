@@ -155,7 +155,10 @@
         <a class="btn btn--come-back">
           <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
         </a>
-        <router-link class="btn btn--next" :to="{ name: 'campus' }" @click.native="changeWildcardActive(1)">
+        <router-link
+            class="btn btn--next"
+            :to="{ name: 'campus' }"
+            @click.native="changeWildcardActive(1)">
           Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
         </router-link>
       </section>

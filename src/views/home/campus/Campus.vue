@@ -112,15 +112,37 @@
       </div>
       <button class="btn btn--outline btn--rounded-edges btn--add-campus">Adicionar Campus</button>
     </section>
-    <section class="campus-data__list"></section>
+    <section class="campus-data__list">
+      <h4 class="campus-data__title">Lista de Campus</h4>
+      <m-list :list-title="listTitle" :list="list"></m-list>
+      <section class="actions">
+        <router-link
+            class="btn btn--come-back"
+            :to="{ name: 'company-data' }"
+            @click.native="changeWildcardActive(0)">
+          <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+        </router-link>
+        <router-link
+            class="btn btn--next"
+            :to="{ name: 'course' }"
+            @click.native="changeWildcardActive(2)">
+          Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+        </router-link>
+      </section>
+    </section>
   </section>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+import List from '../../../components/list/List.vue';
 
 export default {
   name: 'Campus',
+
+  components: {
+    'm-list': List,
+  },
 
   methods: {
     ...mapActions(['changeWildcardActive']),
@@ -140,6 +162,41 @@ export default {
         city: null,
         state: null,
       },
+      listTitle: ['Nome do Campus', 'Responsável', 'Telefone'],
+      list: [
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+        { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
+      ],
     };
   },
 };
