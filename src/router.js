@@ -4,6 +4,7 @@ import Login from './views/login/Login.vue';
 import Home from './views/home/Home.vue';
 import CompanyData from './views/home/company-data/CompanyData.vue';
 import Campus from './views/home/campus/Campus.vue';
+import Course from './views/home/course/Course.vue';
 
 Vue.use(Router);
 
@@ -60,6 +61,28 @@ export default new Router({
           path: 'campus',
           name: 'campus',
           component: Campus,
+          meta: {
+            requireAuth: true,
+            breadcrumbs: [
+              {
+                name: 'Home',
+                link: '',
+              },
+              {
+                name: 'Faculdade',
+                link: '',
+              },
+              {
+                name: 'Nova Faculdade',
+                title: 'Nova Faculdades',
+              },
+            ],
+          },
+        },
+        {
+          path: 'cursos',
+          name: 'course',
+          component: Course,
           meta: {
             requireAuth: true,
             breadcrumbs: [
