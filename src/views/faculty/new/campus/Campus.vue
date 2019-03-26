@@ -135,7 +135,7 @@
 
 <script>
 import { mapActions } from 'vuex';
-import List from '../../../components/list/List.vue';
+import List from '../../../../components/list/List.vue';
 
 export default {
   name: 'Campus',

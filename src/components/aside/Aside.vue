@@ -3,7 +3,7 @@
     <router-link
         class="links-aside__item"
         tag="li"
-        to="/home"
+        to="/lista-faculdades"
         active-class="links-aside__item--active"
         @click.native="changeWildcardActive(0)">
       <a href="#" class="links-aside__link">

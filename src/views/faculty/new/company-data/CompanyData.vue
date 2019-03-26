@@ -169,7 +169,7 @@
 <script>
 import { mapActions } from 'vuex';
 
-import Checkbox from '../../../components/checkbox/Checkbox.vue';
+import Checkbox from '../../../../components/checkbox/Checkbox.vue';
 
 export default {
   name: 'CompanyData',

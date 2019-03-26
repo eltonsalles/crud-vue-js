@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/login/Login.vue';
-import Home from './views/home/Home.vue';
-import CompanyData from './views/home/company-data/CompanyData.vue';
-import Campus from './views/home/campus/Campus.vue';
-import Course from './views/home/course/Course.vue';
+import NewFaculty from './views/faculty/new/New.vue';
+import ListFaculty from './views/faculty/list/List.vue';
+import CompanyData from './views/faculty/new/company-data/CompanyData.vue';
+import Campus from './views/faculty/new/campus/Campus.vue';
+import Course from './views/faculty/new/course/Course.vue';
 
 Vue.use(Router);
 
@@ -32,8 +33,8 @@ export default new Router({
       meta: { requireAuth: false },
     },
     {
-      path: '/home',
-      component: Home,
+      path: '/nova-faculdade',
+      component: NewFaculty,
       children: [
         {
           path: '',
@@ -102,6 +103,12 @@ export default new Router({
           },
         },
       ],
+    },
+    {
+      path: '/lista-faculdades',
+      name: 'lista-faculdades',
+      component: ListFaculty,
+      meta: { requireAuth: true },
     },
   ],
 });

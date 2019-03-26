@@ -10,8 +10,8 @@
 
 <script>
 import { mapState } from 'vuex';
-import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs.vue';
-import Wildcard from '../../components/wildcard/Wildcard.vue';
+import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs.vue';
+import Wildcard from '../../../components/wildcard/Wildcard.vue';
 
 export default {
   name: 'Home',
@@ -30,5 +30,5 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-  @import "Home.css";
+  @import "New.css";
 </style>
