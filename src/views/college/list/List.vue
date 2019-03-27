@@ -26,6 +26,17 @@
     </header>
     <ul class="list">
       <li class="list__item" v-for="n in 12" :key="n">
+        <ul class="list-actions">
+          <li class="list-actions__item">
+            <button>Editar</button>
+          </li>
+          <li class="list-actions__item">
+            <button>Deletar</button>
+          </li>
+          <li class="list-actions__item">
+            <button>Status</button>
+          </li>
+        </ul>
         <figure class="figure">
           <img class="figure__img" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_fmu.jpg" alt="Logo da FMU">
         </figure>
