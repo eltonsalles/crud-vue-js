@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Login from './views/login/Login.vue';
-import NewFaculty from './views/faculty/new/New.vue';
-import ListFaculty from './views/faculty/list/List.vue';
-import CompanyData from './views/faculty/new/company-data/CompanyData.vue';
-import Campus from './views/faculty/new/campus/Campus.vue';
-import Course from './views/faculty/new/course/Course.vue';
+import NewFaculty from './views/college/new/New.vue';
+import ListFaculty from './views/college/list/List.vue';
+import CompanyData from './views/college/new/company-data/CompanyData.vue';
+import Campus from './views/college/new/campus/Campus.vue';
+import Course from './views/college/new/course/Course.vue';
 
 Vue.use(Router);
 
