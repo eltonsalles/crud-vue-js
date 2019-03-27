@@ -24,6 +24,13 @@
         </button>
       </section>
     </header>
+    <ul class="list">
+      <li class="list__item" v-for="n in 12" :key="n">
+        <figure class="figure">
+          <img class="figure__img" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_fmu.jpg" alt="Logo da FMU">
+        </figure>
+      </li>
+    </ul>
     <m-paginate></m-paginate>
   </div>
 </template>
