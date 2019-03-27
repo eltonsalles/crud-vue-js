@@ -108,7 +108,23 @@ export default new Router({
       path: '/lista-faculdades',
       name: 'lista-faculdades',
       component: ListFaculty,
-      meta: { requireAuth: true },
+      meta: {
+        requireAuth: true,
+        breadcrumbs: [
+          {
+            name: 'Home',
+            link: '',
+          },
+          {
+            name: 'Faculdade',
+            link: '',
+          },
+          {
+            name: 'Lista de Faculdades',
+            title: 'Lista de Faculdades',
+          },
+        ],
+      },
     },
   ],
 });

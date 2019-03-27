@@ -1,0 +1,48 @@
+.list-header {
+  display: flex;
+  margin-top: 11px;
+}
+
+.list-header > * {
+  flex: 1;
+}
+
+.list-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .input-group {
+    width: 50%;
+    margin: unset;
+
+    .input-group__field {
+      border-radius: 16px;
+    }
+
+    .input-group__icon {
+      top: 12px;
+    }
+  }
+
+  .btn-new-faculty {
+    background: var(--purple);
+    border-radius: 21px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 42px;
+  }
+
+  .btn-filter {
+    background: var(--purple);
+    border-radius: 50%;
+    height: 42px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .input-group,
+  .btn-new-faculty {
+    margin-right: 20px;
+  }
+}
