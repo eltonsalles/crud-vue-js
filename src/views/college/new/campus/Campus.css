@@ -1,37 +1,4 @@
-.campus-data {
-  display: flex;
-}
-
-.campus-data__general,
-.campus-data__list {
-  flex: 1 50%;
-  padding: 0 40px 0 20px;
-}
-
-.campus-data__general {
-  background: rgba(230, 230, 230, .16);
-}
-
-.campus-data__title {
-  color: var(--purple);
-  font-weight: normal;
-}
-
-.campus-data__title--not-margin {
-  margin-top: 0;
-}
-
 .btn--add-campus {
   width: 80%;
   margin: 0 auto;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  margin: 50px -20px 32px 0;
-}
-
-.actions > .btn:not(:last-of-type) {
-  margin-right: 6px;
 }

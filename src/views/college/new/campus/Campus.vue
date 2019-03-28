@@ -1,7 +1,7 @@
 <template>
-  <section class="campus-data">
-    <section class="campus-data__general">
-      <h4 class="campus-data__title">Dados do Campus</h4>
+  <section class="page-content">
+    <section class="page-content__left-part">
+      <h4 class="page-content__title">Dados do Campus</h4>
       <div class="input-group">
         <input
             class="input-group__field"
@@ -112,10 +112,10 @@
       </div>
       <button class="btn btn--outline btn--rounded-edges btn--add-campus">Adicionar Campus</button>
     </section>
-    <section class="campus-data__list">
-      <h4 class="campus-data__title">Lista de Campus</h4>
+    <section class="page-content__right-part">
+      <h4 class="page-content__title">Lista de Campus</h4>
       <m-list :list-title="listTitle" :list="list"></m-list>
-      <section class="actions">
+      <section class="page-content__actions">
         <router-link
             class="btn btn--come-back"
             :to="{ name: 'company-data' }"

@@ -1,7 +1,7 @@
 <template>
-  <section class="company-data">
-    <section class="company-data__general">
-      <h4 class="company-data__title">Dados da empresa</h4>
+  <section class="page-content">
+    <section class="page-content__left-part">
+      <h4 class="page-content__title">Dados da empresa</h4>
       <div class="input-group">
         <input
             class="input-group__field"
@@ -64,8 +64,8 @@
         <label class="input-group__label" for="financial-officer">Responsável Financeiro</label>
       </div>
     </section>
-    <section class="company-data__address">
-      <h4 class="company-data__title">Endereço</h4>
+    <section class="page-content__right-part">
+      <h4 class="page-content__title">Endereço</h4>
       <div class="input-group">
         <input
             class="input-group__field"
@@ -142,8 +142,8 @@
           <label class="input-group__label" for="state">Estado</label>
         </div>
       </div>
-      <section class="select-product">
-        <h4 class="company-data__title company-data__title--not-margin">Selecionar produto</h4>
+      <section>
+        <h4 class="page-content__title page-content__title--not-margin">Selecionar produto</h4>
         <div class="form-group">
           <m-checkbox label="Sem juros"></m-checkbox>
           <m-checkbox label="Gestão"></m-checkbox>
@@ -151,7 +151,7 @@
           <m-checkbox label="Financie 25%"></m-checkbox>
         </div>
       </section>
-      <section class="actions">
+      <section class="page-content__actions">
         <a class="btn btn--come-back">
           <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
         </a>
