@@ -42,8 +42,8 @@
       <section class="page-content__actions">
         <router-link
             class="btn btn--come-back"
-            :to="{ name: 'company-data' }"
-            @click.native="changeWildcardActive(0)">
+            :to="{ name: 'campus' }"
+            @click.native="changeWildcardActive(1)">
           <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
         </router-link>
         <router-link
@@ -64,7 +64,7 @@ export default {
   name: 'ExcelManual',
 
   methods: {
-    ...mapActions(['changeViaExcelOrManual']),
+    ...mapActions(['changeWildcardActive', 'changeViaExcelOrManual']),
   },
 };
 </script>
