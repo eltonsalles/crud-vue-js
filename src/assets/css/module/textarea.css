@@ -1,0 +1,41 @@
+.textarea-group {
+  position: relative;
+}
+
+.textarea-group__field {
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  padding: 8px 8px 8px 16px;
+  width: 100%;
+  resize: none;
+}
+
+.textarea-group__field:active,
+.textarea-group__field:focus {
+  border-color: var(--purple);
+}
+
+.textarea-group__label {
+  background: transparent;
+  color: var(--gray);
+  cursor: text;
+  font-size: 15px;
+  left: 12px;
+  margin: 0;
+  padding: 1px 8px;
+  position: absolute;
+  top: 12px;
+  transition: background-color .3s, font-size .3s, top .3s;
+}
+
+.textarea-group__field:active + .textarea-group__label,
+.textarea-group__field:focus + .textarea-group__label,
+.textarea-group__field--active + .textarea-group__label {
+  background: var(--white);
+  color: var(--purple);
+  font-size: 11px;
+  top: -7px;
+  transition: all .3s;
+}
