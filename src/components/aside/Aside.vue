@@ -16,7 +16,7 @@
         class="links-aside__item"
         tag="li"
         to="/nova-faculdade"
-        exact-active-class="links-aside__item--active"
+        active-class="links-aside__item--active"
         @click.native="newCollege">
       <a href="#" class="links-aside__link">
         <i class="links-aside__icon icon-plus-button"></i>
