@@ -71,8 +71,8 @@
         </router-link>
         <router-link
             class="btn btn--next"
-            :to="{ name: 'campus' }"
-            @click.native="changeWildcardActive(4)">
+            :to="{ name: 'layout' }"
+            @click.native="changeWildcardActive(3)">
           Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
         </router-link>
       </section>

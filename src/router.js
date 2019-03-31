@@ -6,6 +6,7 @@ import ListFaculty from './views/college/list/List.vue';
 import CompanyData from './views/college/new/company-data/CompanyData.vue';
 import Campus from './views/college/new/campus/Campus.vue';
 import Course from './views/college/new/course/Course.vue';
+import Layout from './views/college/new/layout/Layout.vue';
 
 Vue.use(Router);
 
@@ -84,6 +85,28 @@ export default new Router({
           path: 'cursos',
           name: 'course',
           component: Course,
+          meta: {
+            requireAuth: true,
+            breadcrumbs: [
+              {
+                name: 'Home',
+                link: '',
+              },
+              {
+                name: 'Faculdade',
+                link: '',
+              },
+              {
+                name: 'Nova Faculdade',
+                title: 'Nova Faculdades',
+              },
+            ],
+          },
+        },
+        {
+          path: 'layout',
+          name: 'layout',
+          component: Layout,
           meta: {
             requireAuth: true,
             breadcrumbs: [
