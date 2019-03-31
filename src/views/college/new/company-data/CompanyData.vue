@@ -152,9 +152,6 @@
         </div>
       </section>
       <section class="page-content__actions">
-        <a class="btn btn--come-back">
-          <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
-        </a>
         <router-link
             class="btn btn--next"
             :to="{ name: 'campus' }"

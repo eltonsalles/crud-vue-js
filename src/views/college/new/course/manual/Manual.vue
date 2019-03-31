@@ -61,7 +61,7 @@
     </section>
     <section class="page-content__right-part">
       <h2 class="page-content__title">Lista de cursos</h2>
-      <m-list class="list--course" :list="course.list"></m-list>
+      <m-list :list-title="listTitle" class="list--course" :list="course.list"></m-list>
       <section class="page-content__actions">
         <router-link
             class="btn btn--come-back"
@@ -135,6 +135,7 @@ export default {
           { campusName: 'Campinas - Campus III', responsible: 'Lucas Amaro dos Santos', telephone: '11 5555-5555' },
         ],
       },
+      listTitle: ['Tipo', 'Nome do curso', 'Produto'],
     };
   },
 
