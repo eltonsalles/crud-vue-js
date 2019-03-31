@@ -10,7 +10,7 @@
 }
 
 .login-background {
-  background: #FFFFFF url("../../assets/images/background.jpg") no-repeat;
+  background: #FFFFFF url("../../assets/images/background.png") no-repeat;
   background-size: cover;
 }
 
@@ -28,7 +28,6 @@
 }
 
 .login-form__img {
-  background: purple;
   height: auto;
 }
 

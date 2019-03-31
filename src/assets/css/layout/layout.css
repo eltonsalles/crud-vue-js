@@ -45,7 +45,9 @@
 }
 
 .page-content__left-part {
-  background: rgba(230, 230, 230, .16);
+  background: url("../../assets/images/background-page-content-left-part.png") no-repeat;
+  background-size: contain;
+  padding-right: 80px;
 }
 
 .page-content__title {

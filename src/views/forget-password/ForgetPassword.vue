@@ -1,5 +1,5 @@
 <template>
-  <main class="forget-password">
+  <div class="forget-password">
     <div class="forget-password-background"></div>
     <section class="forget-password-form">
       <img
@@ -30,12 +30,13 @@
         </div>
       </form>
     </section>
-  </main>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'ForgetPassword',
+
   data() {
     return {
       email: '',

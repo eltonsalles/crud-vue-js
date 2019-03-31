@@ -16,11 +16,15 @@
   width: 100%;
 }
 
-.input-group__field:active, .input-group__field:focus, .input-group__field--active {
+.input-group__field:active,
+.input-group__field:focus,
+.input-group__field--active {
   border-color: #6D2795;
 }
 
-.input-group__field:active + .input-group__label, .input-group__field:focus + .input-group__label, .input-group__field--active + .input-group__label, .input-group__field--active + .input-group__label {
+.input-group__field:active + .input-group__label,
+.input-group__field:focus + .input-group__label,
+.input-group__field--active + .input-group__label {
   background: #FFFFFF;
   font-size: 0.6875rem;
   top: -7px;

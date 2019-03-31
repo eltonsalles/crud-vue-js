@@ -5,7 +5,7 @@
         <router-link class="links-header__link-img" to="/">
           <img
               class="links-header__img"
-              src="../../assets/images/logo.png"
+              src="../../assets/images/logo-header.png"
               alt="Logo parcele sua faculdade">
         </router-link>
       </li>
