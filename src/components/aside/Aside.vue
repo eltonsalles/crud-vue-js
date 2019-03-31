@@ -17,7 +17,7 @@
         tag="li"
         to="/nova-faculdade"
         exact-active-class="links-aside__item--active"
-        @click.native="changeWildcardActive(0)">
+        @click.native="newCollege">
       <a href="#" class="links-aside__link">
         <i class="links-aside__icon icon-plus-button"></i>
         <span class="links-aside__text">Nova Faculdades</span>
@@ -45,7 +45,12 @@ export default {
   name: 'Aside',
 
   methods: {
-    ...mapActions(['changeWildcardActive']),
+    ...mapActions(['changeWildcardActive', 'changeViaExcelOrManual']),
+
+    newCollege() {
+      this.changeWildcardActive(0);
+      this.changeViaExcelOrManual('excel');
+    },
   },
 };
 </script>

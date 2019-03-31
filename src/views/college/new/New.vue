@@ -14,7 +14,7 @@ import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs.vue';
 import Wildcard from '../../../components/wildcard/Wildcard.vue';
 
 export default {
-  name: 'Home',
+  name: 'NewCollege',
 
   components: {
     'm-breadcrumbs': Breadcrumbs,
@@ -23,7 +23,7 @@ export default {
 
   computed: {
     ...mapState({
-      wildcardActive: state => state.home.wildcardActive,
+      wildcardActive: state => state.college.wildcardActive,
     }),
   },
 };

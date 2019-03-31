@@ -1,14 +1,16 @@
 .page-content__title {
   margin-top: 50px;
+  padding-left: 30px;
 }
 
 .course-info-panel {
   display: flex;
+  padding-left: 30px;
 }
 
 .course-info-panel__text {
   line-height: 1.5;
-  width: 85%;
+  width: 90%;
 }
 
 .course-info-panel__excel {
