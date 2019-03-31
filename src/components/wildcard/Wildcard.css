@@ -25,6 +25,7 @@ $triangle: 21px;
 
 .wildcard__item:last-of-type {
   margin-right: 20px;
+  border-top-right-radius: 5px;
 }
 
   .wildcard__item--previous {
@@ -50,7 +51,7 @@ $triangle: 21px;
     z-index: 2;
   }
 
-  .wildcard__item--active:after {
+  .wildcard__item--active:not(:last-of-type):after {
     position: absolute;
     right: -$triangle;
     content: "";
