@@ -26,7 +26,8 @@ export default {
   props: {
     listTitle: {
       type: Array,
-      required: true,
+      required: false,
+      default: () => [],
     },
     list: {
       type: Array,
