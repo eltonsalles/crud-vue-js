@@ -53,16 +53,7 @@
         <label
             class="input-group__label" for="municipal-registration">Inscrição Municipal</label>
       </div>
-      <div class="input-group">
-        <input
-            class="input-group__field"
-            type="text"
-            id="financial-officer"
-            maxlength="255"
-            :class="{ 'input-group__field--active': companyData.financialOfficer }"
-            v-model="companyData.financialOfficer">
-        <label class="input-group__label" for="financial-officer">Responsável Financeiro</label>
-      </div>
+      <m-select label="Responsável Financeiro" :options="['a', 'b', 'c']"></m-select>
     </section>
     <section class="page-content__right-part">
       <h4 class="page-content__title">Endereço</h4>
@@ -167,12 +158,14 @@
 import { mapActions } from 'vuex';
 
 import Checkbox from '../../../../components/checkbox/Checkbox.vue';
+import Select from '../../../../components/select/Select.vue';
 
 export default {
   name: 'CompanyData',
 
   components: {
     'm-checkbox': Checkbox,
+    'm-select': Select,
   },
 
   data() {
