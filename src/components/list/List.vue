@@ -3,7 +3,7 @@
     <div class="list-titles">
       <p class="list-titles__title" v-for="(title, index) in listTitle" :key="index">{{ title }}</p>
     </div>
-    <div class="list-content">
+    <div class="list-content scrollbar">
       <div class="list-items" v-for="(item, index) in list" :key="index">
         <p class="list-items__item">{{ item.campusName }}</p>
         <p class="list-items__item">{{ item.responsible }}</p>
