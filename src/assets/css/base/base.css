@@ -15,7 +15,10 @@
   --purple-dark: #6D2795;
   --purple-dark-2: #43425D;
 
-  --red: #CE2E2E;
+  --success: #28a745;
+  --info: #0095C0;
+  --warning: #F89D4A;
+  --danger: #CE2E2E;
 
   --white: #FFFFFF;
 }

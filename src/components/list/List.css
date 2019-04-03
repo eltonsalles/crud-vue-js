@@ -39,7 +39,7 @@
 }
 
 .list-items__btn {
-  background: var(--red);
+  background: var(--danger);
   height: 18px;
   margin-right: 25px;
   padding: 0;

@@ -1,0 +1,119 @@
+/* Default */
+.toasts {
+  animation: entry-alert 500ms;
+  background: var(--purple);
+  border-radius: 0.25rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 360px;
+  z-index: 99999;
+}
+
+.toasts.toasts--bottom-right {
+  bottom: 30px;
+  top: unset;
+}
+
+.toasts--success {
+  background-color: var(--success);
+}
+
+.toasts--info {
+  background-color: var(--info);
+}
+
+.toasts--warning {
+  background-color: var(--warning);
+}
+
+.toasts--danger {
+  background-color: var(--danger);
+}
+
+.toasts--round {
+  border-bottom-left-radius: 39px;
+  border-top-left-radius: 39px;
+}
+
+.toasts__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 11px 23px;
+}
+
+.toasts__timer {
+  animation: progress-bar 4500ms ease 500ms;
+  background: var(--gray);
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.toasts--round /deep/ .toasts__timer {
+  animation: progress-bar-round 4500ms ease 500ms;
+  left: 40px;
+}
+
+.c-btn {
+  color: var(--white);
+  padding: unset;
+}
+
+.c-btn:hover {
+  color: var(--gray-dark);
+}
+
+/* Fim Default */
+
+/* Fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Fim Fade */
+
+/* Animations */
+@keyframes progress-bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress-bar-round {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 40px);
+  }
+}
+
+@keyframes entry-alert {
+  from {
+    right: calc((360px + 30px) * -1); /* width + right */
+    opacity: 0;
+  }
+  to {
+    right: 30px;
+    opacity: 1;
+  }
+}
+
+/* Fim Animations */

@@ -135,7 +135,7 @@
 
 .input-file-list__icon {
   align-items: center;
-  background: var(--red);
+  background: var(--danger);
   border-radius: 50%;
   color: var(--white);
   cursor: pointer;
