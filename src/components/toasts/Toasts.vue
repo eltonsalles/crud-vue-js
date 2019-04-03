@@ -1,13 +1,13 @@
 <template>
   <transition name="fade">
-    <div class="c-toasts" v-if="isShow">
-      <div class="c-toasts__timer"></div>
-      <div class="c-toasts__content">
+    <div class="toasts" v-if="isShow">
+      <div class="toasts__timer"></div>
+      <div class="toasts__content">
         <div>
           <slot></slot>
         </div>
-        <button class="c-btn" @click="$emit('closeToasts')">
-          <i class="material-icons">close</i>
+        <button class="btn" @click="$emit('closeToasts')">
+          <i class="icon-close"></i>
         </button>
       </div>
     </div>

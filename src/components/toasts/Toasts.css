@@ -9,7 +9,7 @@
   margin-bottom: 15px;
   position: fixed;
   right: 30px;
-  top: 30px;
+  top: 100px;
   width: 360px;
   z-index: 99999;
 }
@@ -62,12 +62,13 @@
   left: 40px;
 }
 
-.c-btn {
+.btn {
+  background: transparent;
   color: var(--white);
   padding: unset;
 }
 
-.c-btn:hover {
+.btn:hover {
   color: var(--gray-dark);
 }
 
