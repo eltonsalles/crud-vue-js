@@ -16,6 +16,14 @@
   width: 100%;
 }
 
+.input-group.input-group--error .input-group__field {
+  border-color: var(--danger);
+}
+
+.input-group.input-group--error .input-group__label {
+  color: var(--danger);
+}
+
 .input-group__field:active,
 .input-group__field:focus,
 .input-group__field--active {

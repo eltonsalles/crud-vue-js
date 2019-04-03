@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import VueTheMask from 'vue-the-mask';
+import Vuelidate from 'vuelidate';
 import App from './App.vue';
 import router from './router';
 import store from './store/store';
@@ -19,6 +21,9 @@ router.beforeEach((to, from, next) => {
 
   return next();
 });
+
+Vue.use(VueTheMask);
+Vue.use(Vuelidate);
 
 new Vue({
   router,
