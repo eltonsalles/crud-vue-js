@@ -5,4 +5,7 @@ export default {
   changeViaExcelOrManual(context, payload) {
     context.commit('CHANGE_VIA_EXCEL_OR_MANUAL', payload);
   },
+  changeCompanyData(context, payload) {
+    context.commit('CHANGE_COMPANY_DATA', payload);
+  },
 };

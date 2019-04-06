@@ -7,4 +7,7 @@ export default {
   CHANGE_VIA_EXCEL_OR_MANUAL(state, payload) {
     state.viaExcelOrManual = payload;
   },
+  CHANGE_COMPANY_DATA(state, payload) {
+    state.companyData = payload;
+  },
 };
