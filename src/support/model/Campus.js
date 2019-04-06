@@ -7,42 +7,24 @@ const address = cloneObject(Address);
 
 export default {
   inputs: {
-    fantasyName: null,
-    socialName: null,
-    cnpj: null,
-    stateRegistration: null,
-    municipalRegistration: null,
-    financialOfficer: null,
+    campusName: null,
+    responsible: null,
+    telephone: null,
     address: address.inputs,
-    products: [],
   },
   validations: {
-    fantasyName: {
+    campusName: {
       required,
       maxLength: maxLength(255),
     },
-    socialName: {
+    responsible: {
       required,
       maxLength: maxLength(255),
     },
-    cnpj: {
-      required,
-      maxLength: maxLength(18),
-    },
-    stateRegistration: {
+    telephone: {
       required,
       maxLength: maxLength(255),
-    },
-    municipalRegistration: {
-      required,
-      maxLength: maxLength(255),
-    },
-    financialOfficer: {
-      required,
     },
     address: address.validations,
-    products: {
-      required,
-    },
   },
 };
