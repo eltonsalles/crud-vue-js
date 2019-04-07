@@ -8,7 +8,7 @@
         <p class="list-items__item">{{ item.campusName }}</p>
         <p class="list-items__item">{{ item.responsible }}</p>
         <p class="list-items__item">{{ item.telephone }}</p>
-        <button class="list-items__btn btn btn--floating">
+        <button @click="$emit('removeItem', index)" class="list-items__btn btn btn--floating">
           <i class="list-items__icon icon-close"></i>
         </button>
       </div>
