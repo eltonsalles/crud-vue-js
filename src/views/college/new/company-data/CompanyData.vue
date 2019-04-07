@@ -71,6 +71,7 @@
             :class="{ 'select-group--error': $v.companyData.financialOfficer.$error }"
             label="Responsável Financeiro"
             :options="financialOfficer.options"
+            :selected="financialOfficer.selected"
             v-model="companyData.financialOfficer"></m-select>
       </section>
       <section class="page-content__right-part">
@@ -171,20 +172,11 @@
           <div class="form-group">
             <m-checkbox
                 :class="{ 'checkbox-group--error': $v.companyData.products.$error }"
-                @input="checkedProduct"
-                label="Sem juros"></m-checkbox>
-            <m-checkbox
-                :class="{ 'checkbox-group--error': $v.companyData.products.$error }"
-                @input="checkedProduct"
-                label="Gestão"></m-checkbox>
-            <m-checkbox
-                :class="{ 'checkbox-group--error': $v.companyData.products.$error }"
-                @input="checkedProduct"
-                label="Financie 50%"></m-checkbox>
-            <m-checkbox
-                :class="{ 'checkbox-group--error': $v.companyData.products.$error }"
-                @input="checkedProduct"
-                label="Financie 25%"></m-checkbox>
+                v-for="(product, index) in checkboxProducts"
+                :key="index"
+                :label="product.label"
+                :checkbox-checked="product.checkboxChecked"
+                @input="checkedProduct"></m-checkbox>
           </div>
         </section>
         <section class="page-content__actions">
@@ -208,7 +200,9 @@ import { mapActions } from 'vuex';
 import Checkbox from '../../../../components/checkbox/Checkbox.vue';
 import Select from '../../../../components/select/Select.vue';
 import Toasts from '../../../../components/toasts/Toasts.vue';
+
 import companyData from '../../../../support/model/CompanyData';
+import cloneObject from '../../../../support/helper/cloneObject';
 
 export default {
   name: 'CompanyData',
@@ -230,12 +224,19 @@ export default {
       companyData: companyData.inputs,
       showToasts: false,
       financialOfficer: {
+        selected: null,
         options: [
           { id: 1, label: 'a' },
           { id: 2, label: 'b' },
           { id: 3, label: 'c' },
         ],
       },
+      checkboxProducts: [
+        { checkboxChecked: false, label: 'Sem juros' },
+        { checkboxChecked: false, label: 'Gestão' },
+        { checkboxChecked: false, label: 'Financie 50%' },
+        { checkboxChecked: false, label: 'Financie 25%' },
+      ],
     };
   },
 
@@ -262,11 +263,32 @@ export default {
       if (this.$v.$invalid) {
         this.showToasts = true;
       } else {
-        this.changeCompanyData(this.companyData);
+        this.changeCompanyData(cloneObject(this.companyData));
         this.changeWildcardActive(1);
         this.$router.push({ name: 'campus' });
       }
     },
+
+    checkCompanyDataState() {
+      const companyDataState = this.$store.state.college.companyData;
+      if (companyDataState.products.length > 0) {
+        this.$v.$reset();
+        this.companyData = cloneObject(companyDataState);
+
+        this.financialOfficer.selected = this.financialOfficer.options
+          .find(item => item.id === this.companyData.financialOfficer);
+
+        this.checkboxProducts.forEach((item, index) => {
+          if (this.companyData.products.findIndex(product => product === item.label) !== -1) {
+            this.checkboxProducts[index].checkboxChecked = true;
+          }
+        });
+      }
+    },
+  },
+
+  created() {
+    this.checkCompanyDataState();
   },
 };
 </script>
