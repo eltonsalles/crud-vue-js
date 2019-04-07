@@ -56,6 +56,12 @@ export default {
     };
   },
 
+  watch: {
+    selected(newValue) {
+      this.valueSelect = newValue;
+    },
+  },
+
   methods: {
     updatedValue() {
       if (this.valueSelect) {

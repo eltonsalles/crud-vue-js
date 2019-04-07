@@ -40,16 +40,26 @@ export default {
     };
   },
 
+  watch: {
+    checkboxChecked(newValue) {
+      this.valueCheckbox = newValue;
+      this.updateClasse(newValue);
+    },
+  },
+
   methods: {
     updatedValue(value) {
+      this.updateClasse(value);
+      this.$emit('input', { checked: value, value: this.label });
+    },
+
+    updateClasse(value) {
       if (value) {
         // Como o texto é colocado apenas na primeira classe foi mantido o estilo nas demais classes
         this.classCheckboxGroupItem = 'checkbox-group__item enhancedCheck-checkbox-group__item--active';
       } else {
         this.classCheckboxGroupItem = 'checkbox-group__item';
       }
-
-      this.$emit('input', { checked: value, value: this.label });
     },
   },
 };
