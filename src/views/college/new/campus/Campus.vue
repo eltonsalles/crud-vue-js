@@ -187,8 +187,8 @@ export default {
 
   data() {
     return {
-      showToasts: false,
       campus: campus.inputs,
+      showToasts: false,
       listCampus: [],
       list: {
         title: ['Nome do Campus', 'Responsável', 'Telefone'],
@@ -238,6 +238,7 @@ export default {
     removeItemListCampus(index) {
       this.list.data.splice(index, 1);
       this.listCampus.splice(index, 1);
+      this.changeCampus(this.listCampus);
     },
 
     nextForm() {
@@ -250,6 +251,24 @@ export default {
         this.$router.push({ name: 'course' });
       }
     },
+
+    checkCampusState() {
+      const campusState = this.$store.state.college.campus;
+      if (campusState.length > 0) {
+        campusState.forEach((item) => {
+          this.list.data.push({
+            campusName: item.campusName,
+            responsible: item.responsible,
+            telephone: item.telephone,
+          });
+          this.listCampus.push(cloneObject(item));
+        });
+      }
+    },
+  },
+
+  created() {
+    this.checkCampusState();
   },
 };
 </script>
