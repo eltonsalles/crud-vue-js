@@ -78,10 +78,6 @@ $top-label: 12px; /* O top é relativo a altura do select */
   border: 1px solid var(--gray-light);
 }
 
-.select-group__field:hover /deep/ .dropdown-toggle {
-  border-color: var(--gray);
-}
-
 .select-group__field /deep/ .selected-tag {
   height: $height-select;
 }

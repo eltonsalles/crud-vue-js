@@ -4,6 +4,8 @@
         :subClass="classCheckboxGroupItem"
         :label="label"
         :rounded="true"
+        :checked="valueCheckbox"
+        :value="valueCheckbox"
         @input="updatedValue"></enhanced-check>
   </div>
 </template>
@@ -23,12 +25,18 @@ export default {
       type: String,
       required: true,
     },
+    checkboxChecked: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 
   data() {
     return {
       // O componente de terceiros coloca esse texto 'enhancedCheck-' no inicio da classe
-      classCheckboxGroupItem: 'checkbox-group__item',
+      classCheckboxGroupItem: this.checkboxChecked ? 'checkbox-group__item enhancedCheck-checkbox-group__item--active' : 'checkbox-group__item',
+      valueCheckbox: this.checkboxChecked,
     };
   },
 
