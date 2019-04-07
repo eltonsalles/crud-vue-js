@@ -11,4 +11,7 @@ export default {
   changeCampus(context, payload) {
     context.commit('CHANGE_CAMPUS', payload);
   },
+  changeCourses(context, payload) {
+    context.commit('CHANGE_COURSES', payload);
+  },
 };

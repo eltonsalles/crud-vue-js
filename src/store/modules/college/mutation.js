@@ -13,4 +13,7 @@ export default {
   CHANGE_CAMPUS(state, payload) {
     state.campus = payload;
   },
+  CHANGE_COURSES(state, payload) {
+    state.courses = payload;
+  },
 };

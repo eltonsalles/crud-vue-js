@@ -61,7 +61,8 @@
   display: flex;
 }
 
-.form-group .input-group:not(:last-of-type) {
+.form-group .input-group:not(:last-of-type),
+.form-group .select-group:not(:last-of-type) {
   margin-right: 16px;
 }
 

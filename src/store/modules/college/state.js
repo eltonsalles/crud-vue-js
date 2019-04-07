@@ -5,4 +5,5 @@ export default {
   viaExcelOrManual: 'excel',
   companyData: companyData.inputs,
   campus: [],
+  courses: [],
 };
