@@ -8,4 +8,7 @@ export default {
   changeCompanyData(context, payload) {
     context.commit('CHANGE_COMPANY_DATA', payload);
   },
+  changeCampus(context, payload) {
+    context.commit('CHANGE_CAMPUS', payload);
+  },
 };

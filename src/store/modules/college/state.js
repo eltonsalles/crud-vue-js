@@ -4,4 +4,5 @@ export default {
   wildcardActive: 0,
   viaExcelOrManual: 'excel',
   companyData: companyData.inputs,
+  campus: [],
 };

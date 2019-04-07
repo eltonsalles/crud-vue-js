@@ -10,4 +10,7 @@ export default {
   CHANGE_COMPANY_DATA(state, payload) {
     state.companyData = payload;
   },
+  CHANGE_CAMPUS(state, payload) {
+    state.campus = payload;
+  },
 };
