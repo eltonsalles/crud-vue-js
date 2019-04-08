@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueTheMask from 'vue-the-mask';
+import VueSweetalert2 from 'vue-sweetalert2';
 import Vuelidate from 'vuelidate';
 import App from './App.vue';
 import router from './router';
@@ -24,6 +25,7 @@ router.beforeEach((to, from, next) => {
 
 Vue.use(VueTheMask);
 Vue.use(Vuelidate);
+Vue.use(VueSweetalert2);
 
 new Vue({
   router,
