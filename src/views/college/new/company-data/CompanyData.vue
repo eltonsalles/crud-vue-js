@@ -201,8 +201,10 @@ import Checkbox from '../../../../components/checkbox/Checkbox.vue';
 import Select from '../../../../components/select/Select.vue';
 import Toasts from '../../../../components/toasts/Toasts.vue';
 
-import companyData from '../../../../support/model/CompanyData';
+import CompanyData from '../../../../support/model/CompanyData';
 import cloneObject from '../../../../support/helper/cloneObject';
+
+const companyData = cloneObject(CompanyData.inputs);
 
 export default {
   name: 'CompanyData',
@@ -221,7 +223,7 @@ export default {
 
   data() {
     return {
-      companyData: companyData.inputs,
+      companyData,
       showToasts: false,
       financialOfficer: {
         selected: null,
@@ -241,7 +243,7 @@ export default {
   },
 
   validations: {
-    companyData: companyData.validations,
+    companyData: CompanyData.validations,
   },
 
   methods: {
@@ -283,6 +285,8 @@ export default {
             this.checkboxProducts[index].checkboxChecked = true;
           }
         });
+      } else {
+        this.companyData = cloneObject(CompanyData.inputs);
       }
     },
   },
