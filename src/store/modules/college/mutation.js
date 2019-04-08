@@ -1,4 +1,8 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
+import CompanyData from '../../../support/model/CompanyData';
+import cloneObject from '../../../support/helper/cloneObject';
+
+const companyData = cloneObject(CompanyData.inputs);
 
 export default {
   CHANGE_WILDCARD_ACTIVE(state, payload) {
@@ -15,5 +19,10 @@ export default {
   },
   CHANGE_COURSES(state, payload) {
     state.courses = payload;
+  },
+  CHANGE_RESET(state) {
+    state.companyData = companyData;
+    state.campus = [];
+    state.courses = [];
   },
 };

@@ -14,4 +14,7 @@ export default {
   changeCourses(context, payload) {
     context.commit('CHANGE_COURSES', payload);
   },
+  resetState(context) {
+    context.commit('CHANGE_RESET');
+  },
 };
