@@ -17,6 +17,10 @@
   border-color: var(--purple);
 }
 
+.textarea-group.textarea-group--error .textarea-group__field {
+  border-color: var(--danger);
+}
+
 .textarea-group__label {
   background: transparent;
   color: var(--gray);
@@ -34,8 +38,16 @@
 .textarea-group__field:focus + .textarea-group__label,
 .textarea-group__field--active + .textarea-group__label {
   background: var(--white);
-  color: var(--purple);
   font-size: 11px;
   top: -7px;
   transition: all .3s;
+}
+
+.textarea-group__field:active + .textarea-group__label,
+.textarea-group__field:focus + .textarea-group__label {
+  color: var(--purple);
+}
+
+.textarea-group.textarea-group--error .textarea-group__label {
+  color: var(--danger);
 }

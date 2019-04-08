@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.input-group__field:disabled {
+  background: transparent;
+}
+
 .input-group.input-group--error .input-group__field {
   border-color: var(--danger);
 }
@@ -25,8 +29,7 @@
 }
 
 .input-group__field:active,
-.input-group__field:focus,
-.input-group__field--active {
+.input-group__field:focus {
   border-color: #6D2795;
 }
 
@@ -37,6 +40,11 @@
   font-size: 0.6875rem;
   top: -7px;
   transition: all 300ms;
+}
+
+.input-group__field:active + .input-group__label,
+.input-group__field:focus + .input-group__label {
+  color: var(--purple);
 }
 
 .input-group__label {

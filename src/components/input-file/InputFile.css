@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.input-file-wrapper.input-file--error /deep/ .input-file {
+  border-color: var(--danger);
+}
+
 .input-file {
   align-items: center;
   border: 2px dashed var(--gray-light);

@@ -11,10 +11,6 @@ $top-label: 12px; /* O top é relativo a altura do select */
   border-color: var(--danger);
 }
 
-.select-group /deep/ .select-group__field--selected .dropdown-toggle {
-  border-color: var(--purple);
-}
-
 .select-group__label {
   color: var(--gray);
   font-size: 16px;
@@ -33,6 +29,10 @@ $top-label: 12px; /* O top é relativo a altura do select */
   font-size: 11px;
   top: -7px;
   transition: all .3s;
+}
+
+.select-group__field.open /deep/ + .select-group__label {
+  color: var(--purple);
 }
 
 .select-group__field.disabled /deep/ + .select-group__label {
