@@ -86,7 +86,7 @@
               maxlength="9"
               v-mask="'#####-###'"
               :class="{ 'input-group__field--active': companyData.address.cep }"
-              v-model="companyData.address.cep">
+              @input="searchAddress($event.target.value)">
           <label class="input-group__label" for="cep">CEP</label>
         </div>
         <div class="form-group">
@@ -196,15 +196,17 @@
 
 <script>
 import { mapActions } from 'vuex';
+import cloneObject from '../../../../support/helper/cloneObject';
 
 import Checkbox from '../../../../components/checkbox/Checkbox.vue';
 import Select from '../../../../components/select/Select.vue';
 import Toasts from '../../../../components/toasts/Toasts.vue';
 
 import CompanyData from '../../../../support/model/CompanyData';
-import cloneObject from '../../../../support/helper/cloneObject';
+import Address from '../../../../domains/services/Address';
 
 const companyData = cloneObject(CompanyData.inputs);
+const address = new Address();
 
 export default {
   name: 'CompanyData',
@@ -257,6 +259,12 @@ export default {
         this.companyData.products.push(checkbox.value);
       } else {
         this.companyData.products.splice(indexExistingItem, 1);
+      }
+    },
+
+    searchAddress(value) {
+      if (value.length === 9) {
+        console.log('cep', value); // Está chamando 2x
       }
     },
 
