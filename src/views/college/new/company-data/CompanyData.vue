@@ -86,7 +86,8 @@
               maxlength="9"
               v-mask="'#####-###'"
               :class="{ 'input-group__field--active': companyData.address.cep }"
-              @input="searchAddress($event.target.value)">
+              v-model="companyData.address.cep"
+              @input="searchAddress">
           <label class="input-group__label" for="cep">CEP</label>
         </div>
         <div class="form-group">
@@ -189,7 +190,7 @@
       </section>
     </form>
     <m-toasts class="toasts--danger" :is-show="isShowToasts" @closeToasts="showToasts = false">
-      <p>Existem campos pendentes e/ou não preenchidos.</p>
+      <p>{{ message }}</p>
     </m-toasts>
   </div>
 </template>
@@ -241,6 +242,7 @@ export default {
         { checkboxChecked: false, label: 'Financie 50%' },
         { checkboxChecked: false, label: 'Financie 25%' },
       ],
+      message: '',
     };
   },
 
@@ -262,16 +264,38 @@ export default {
       }
     },
 
-    searchAddress(value) {
-      if (value.length === 9) {
-        console.log('cep', value); // Está chamando 2x
+    searchAddress() {
+      if (this.companyData.address.cep.length === 9) {
+        this.fillAddress('...');
+        address
+          .search(this.companyData.address.cep)
+          .then((result) => {
+            this.companyData.address.address = result.address;
+            this.companyData.address.district = result.district;
+            this.companyData.address.city = result.city;
+            this.companyData.address.state = result.state;
+          })
+          .catch((error) => {
+            console.log(error);
+            this.showToasts = true;
+            this.message = 'Não foi possível encontrar o endereço para o CEP informado.';
+            this.fillAddress();
+          });
       }
+    },
+
+    fillAddress(value = null) {
+      this.companyData.address.address = value;
+      this.companyData.address.district = value;
+      this.companyData.address.city = value;
+      this.companyData.address.state = value;
     },
 
     nextForm() {
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.showToasts = true;
+        this.message = 'Existem campos pendentes e/ou não preenchidos.';
       } else {
         this.changeCompanyData(cloneObject(this.companyData));
         this.changeWildcardActive(1);

@@ -15,32 +15,32 @@ export default class Address {
   }
 
   search(cep) {
-    const value = cep.replace(/\D/g, '');
+    const value = cep.toString().replace(/\D/g, '');
     if (value !== '') {
       const pattern = /^[0-9]{8}$/;
       if (pattern.test(value)) {
-        this._http
+        return this._http
           .get(`${value}/json/`)
           .then((response) => {
-            if ('erro' in response) {
+            if ('erro' in response.data) {
               throw new Error(`Nenhum endereço encontrado para o CEP: ${value}.`);
             }
 
             return {
-              address: response.logradouro,
+              address: response.data.logradouro,
               number: null,
               complement: null,
-              district: response.bairro,
-              city: response.localidade,
-              state: response.uf,
+              district: response.data.bairro,
+              city: response.data.localidade,
+              state: response.data.uf,
             };
           })
-          .catch(() => {
-            throw new Error('Erro ao consultar o CEP.');
+          .catch((error) => {
+            throw new Error(`Erro ao consultar o CEP. ${error}`);
           });
-      } else {
-        throw new Error('O CEP não possui 8 dígitos');
       }
+
+      throw new Error('O CEP não possui 8 dígitos');
     } else {
       throw new Error('Não foi informado nenhum valor para o CEP.');
     }
