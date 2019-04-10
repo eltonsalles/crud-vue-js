@@ -51,7 +51,8 @@
             maxlength="9"
             v-mask="'#####-###'"
             :class="{ 'input-group__field--active': campus.address.cep }"
-            v-model="campus.address.cep">
+            v-model="campus.address.cep"
+            @input="searchAddress">
         <label class="input-group__label" for="cep">CEP</label>
       </div>
       <div class="form-group">
@@ -170,6 +171,9 @@ import cloneObject from '../../../../support/helper/cloneObject';
 import List from '../../../../components/list/List.vue';
 import campus from '../../../../support/model/Campus';
 import Toasts from '../../../../components/toasts/Toasts.vue';
+import Address from '../../../../domains/services/Address';
+
+const address = new Address();
 
 export default {
   name: 'Campus',
@@ -204,6 +208,33 @@ export default {
 
   methods: {
     ...mapActions(['changeWildcardActive', 'changeCampus']),
+
+    searchAddress() {
+      if (this.campus.address.cep.length === 9) {
+        this.fillAddress('...');
+        address
+          .search(this.campus.address.cep)
+          .then((result) => {
+            this.campus.address.address = result.address;
+            this.campus.address.district = result.district;
+            this.campus.address.city = result.city;
+            this.campus.address.state = result.state;
+          })
+          .catch((error) => {
+            console.log(error);
+            this.showToasts = true;
+            this.message = 'Não foi possível encontrar o endereço para o CEP informado.';
+            this.fillAddress();
+          });
+      }
+    },
+
+    fillAddress(value = null) {
+      this.campus.address.address = value;
+      this.campus.address.district = value;
+      this.campus.address.city = value;
+      this.campus.address.state = value;
+    },
 
     addCampus() {
       this.$v.$touch();
