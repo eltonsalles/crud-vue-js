@@ -2,6 +2,7 @@ import { required, maxLength } from 'vuelidate/lib/validators';
 import Address from './Address';
 
 import cloneObject from '../helper/cloneObject';
+import isCNPJ from '../helper/validateCNPJ';
 
 const address = cloneObject(Address);
 
@@ -28,6 +29,7 @@ export default {
     cnpj: {
       required,
       maxLength: maxLength(18),
+      isCNPJ,
     },
     stateRegistration: {
       required,
