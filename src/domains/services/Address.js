@@ -15,34 +15,38 @@ export default class Address {
   }
 
   search(cep) {
-    const value = cep.toString().replace(/\D/g, '');
-    if (value !== '') {
-      const pattern = /^[0-9]{8}$/;
-      if (pattern.test(value)) {
-        return this._http
-          .get(`${value}/json/`)
-          .then((response) => {
-            if ('erro' in response.data) {
-              throw new Error(`Nenhum endereço encontrado para o CEP: ${value}.`);
-            }
+    return new Promise((resolve, reject) => {
+      const value = cep.toString().replace(/\D/g, '');
 
-            return {
-              address: response.data.logradouro,
-              number: null,
-              complement: null,
-              district: response.data.bairro,
-              city: response.data.localidade,
-              state: response.data.uf,
-            };
-          })
-          .catch((error) => {
-            throw new Error(`Erro ao consultar o CEP. ${error}`);
-          });
+      if (value !== '') {
+        const pattern = /^[0-9]{8}$/;
+
+        if (pattern.test(value)) {
+          resolve(this._http
+            .get(`${value}/json/`)
+            .then((response) => {
+              if ('erro' in response.data) {
+                throw new Error(`Nenhum endereço encontrado para o CEP: ${value}.`);
+              }
+
+              return {
+                address: response.data.logradouro,
+                number: null,
+                complement: null,
+                district: response.data.bairro,
+                city: response.data.localidade,
+                state: response.data.uf,
+              };
+            })
+            .catch((error) => {
+              throw new Error(`Erro ao consultar o CEP. ${error}`);
+            }));
+        }
+
+        reject(new Error('O CEP não possui 8 dígitos'));
       }
 
-      throw new Error('O CEP não possui 8 dígitos');
-    } else {
-      throw new Error('Não foi informado nenhum valor para o CEP.');
-    }
+      reject(new Error('Não foi informado nenhum valor para o CEP.'));
+    });
   }
 }

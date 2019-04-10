@@ -52,7 +52,7 @@
             v-mask="'#####-###'"
             :class="{ 'input-group__field--active': campus.address.cep }"
             v-model="campus.address.cep"
-            @input="searchAddress">
+            @keyup="searchAddress">
         <label class="input-group__label" for="cep">CEP</label>
       </div>
       <div class="form-group">
