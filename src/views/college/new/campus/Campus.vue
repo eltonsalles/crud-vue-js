@@ -221,9 +221,8 @@ export default {
             this.campus.address.state = result.state;
           })
           .catch((error) => {
-            console.log(error);
             this.showToasts = true;
-            this.message = 'Não foi possível encontrar o endereço para o CEP informado.';
+            this.message = error.message;
             this.fillAddress();
           });
       }
