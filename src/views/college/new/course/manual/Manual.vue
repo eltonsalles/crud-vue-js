@@ -1,6 +1,6 @@
 <template>
   <section class="page-content">
-    <form class="page-content__left-part" novalidate autocomplete="off">
+    <section class="page-content__left-part">
       <h2 class="page-content__title">Dados do Curso</h2>
       <div class="form-group">
         <m-select
@@ -14,6 +14,7 @@
             class="input-group input-group--size-1"
             :class="{ 'input-group--error': $v.course.courseName.$error }">
           <input
+              autocomplete="off"
               class="input-group__field"
               type="text"
               id="name"
@@ -36,6 +37,7 @@
             class="input-group input-group--size-1"
             :class="{ 'input-group--error': $v.course.valueCourse.$error }">
           <input
+              autocomplete="off"
               class="input-group__field"
               type="text"
               id="value"
@@ -64,17 +66,19 @@
       <h2 class="page-content__title page-content__title--campus">Lista de campus</h2>
       <m-list
           class="list--campus"
-          :list="listCampus.data"></m-list>
+          :list="listCampus.data"
+          @removeItem="removeItemListCampus"></m-list>
       <button
           class="btn btn--outline btn--rounded-edges btn--add-course"
           @click.prevent="addCourse">Adicionar Curso</button>
-    </form>
+    </section>
     <section class="page-content__right-part">
       <h2 class="page-content__title">Lista de cursos</h2>
       <m-list
           class="list--course"
           :list-title="listCourse.title"
-          :list="listCourse.data"></m-list>
+          :list="listCourse.data"
+          @removeItem="removeItemListCourse"></m-list>
       <section class="page-content__actions">
         <router-link
             tag="button"
@@ -213,6 +217,11 @@ export default {
       });
     },
 
+    removeItemListCampus(index) {
+      this.listCampus.data.splice(index, 1);
+      this.listAddCampus.splice(index, 1);
+    },
+
     addCourse() {
       if (this.listAddCampus.length === 0) {
         this.showToasts = true;
@@ -247,6 +256,12 @@ export default {
       });
       this.listCampus.data = [];
       this.listAddCampus = [];
+    },
+
+    removeItemListCourse(index) {
+      this.listCourse.data.splice(index, 1);
+      this.listAddCourse.splice(index, 1);
+      this.changeCourses(this.listAddCourse);
     },
 
     comeBackViaExcel() {

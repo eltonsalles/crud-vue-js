@@ -210,7 +210,7 @@ export default {
     ...mapActions(['changeWildcardActive', 'changeCampus']),
 
     searchAddress() {
-      if (this.campus.address.cep.length === 9) {
+      if (this.campus.address.cep !== null && this.campus.address.cep.length === 9) {
         this.fillAddress('...');
         address
           .search(this.campus.address.cep)
