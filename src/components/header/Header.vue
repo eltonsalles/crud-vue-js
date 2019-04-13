@@ -26,14 +26,14 @@
       </li>
       <li class="links-user__item links-user__item--logout">
         <a href="#" class="links-user__link" @click.prevent="activeLogout = !activeLogout">
-          <i class="icon-close"></i>
+          <i class="icon-down-arrow"></i>
         </a>
         <ul
             class="links-logout"
             :class="{ 'links-logout--visible': activeLogout }"
             @mouseleave="activeLogout = !activeLogout">
           <li class="links-logout__item">
-            <button class="btn">Sair</button>
+            <button class="btn" @click="logout">Sair</button>
           </li>
         </ul>
       </li>
@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Header',
 
@@ -49,6 +51,15 @@ export default {
     return {
       activeLogout: false,
     };
+  },
+
+  methods: {
+    ...mapActions(['changeAuthenticated']),
+
+    logout() {
+      this.changeAuthenticated(false);
+      this.$router.push({ name: 'login' });
+    },
   },
 };
 </script>

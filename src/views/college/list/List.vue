@@ -11,7 +11,7 @@
               maxlength="255"
               placeholder="Buscar"
               v-model="search">
-          <i class="input-group__icon icon-close"></i>
+          <i class="input-group__icon icon-search"></i>
         </div>
         <router-link
             class="btn btn-new-faculty"
@@ -19,9 +19,6 @@
             :to="{ name: 'company-data' }">
           Nova Faculdade
         </router-link>
-        <button class="btn btn-filter">
-          <i class="icon-close"></i>
-        </button>
       </section>
     </header>
     <ul class="list">

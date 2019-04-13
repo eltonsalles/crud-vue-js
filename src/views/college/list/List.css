@@ -42,9 +42,12 @@
     padding-right: 15px;
   }
 
-  .input-group,
-  .btn-new-faculty {
+  .input-group {
     margin-right: 20px;
+  }
+
+  .btn-new-faculty {
+    margin-right: 10px;
   }
 }
 
