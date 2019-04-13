@@ -40,7 +40,7 @@
               type="text"
               id="value"
               maxlength="255"
-              v-mask="'R$ #####,##'"
+              v-mask="['R$ ##,##', 'R$ ###,##', 'R$ ####,##', 'R$ #####,##']"
               :class="{ 'input-group__field--active': course.valueCourse }"
               v-model="course.valueCourse">
           <label class="input-group__label" for="value">Valor do curso</label>
@@ -81,12 +81,12 @@
             class="btn btn--come-back"
             :to="{ name: 'course' }"
             @click.native="comeBackViaExcel">
-          <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+          <i class="icon-left icon-arrow-left"></i>Voltar
         </router-link>
         <button
             class="btn btn--next"
             @click.prevent="nextForm">
-          Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+          Próximo<i class="icon-right icon-arrow-right"></i>
         </button>
       </section>
     </section>

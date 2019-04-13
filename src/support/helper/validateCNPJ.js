@@ -1,4 +1,6 @@
 const isCNPJ = (cnpj) => {
+  if (cnpj === null) return false;
+
   const value = cnpj.toString().replace(/\D/g, '');
 
   if (value.length !== 14) return false;

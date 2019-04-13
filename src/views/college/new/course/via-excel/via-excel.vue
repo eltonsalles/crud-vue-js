@@ -44,13 +44,13 @@
             class="btn btn--come-back"
             :to="{ name: 'campus' }"
             @click.native="changeWildcardActive(1)">
-          <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+          <i class="icon-left icon-arrow-left"></i>Voltar
         </router-link>
         <router-link
-            class="btn btn--come-back"
+            class="btn btn--come-back btn--disabled"
             :to="{ name: 'course' }"
             @click.native="changeWildcardActive(2)">
-          Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+          Próximo<i class="icon-right icon-arrow-right"></i>
         </router-link>
       </section>
     </section>

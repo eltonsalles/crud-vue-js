@@ -8,7 +8,7 @@
          'input-file--column': direction === 'column',
          'input-file--row': direction === 'row'
         }">
-      <i class="input-file__icon icon-money" v-if="direction === 'column'"></i>
+      <i class="input-file__icon icon-upload" v-if="direction === 'column'"></i>
       <p class="input-file__label">{{ labelDragAndDrop }}</p>
       <button class="input-file__btn">
         {{ labelButton }}

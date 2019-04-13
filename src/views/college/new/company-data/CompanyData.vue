@@ -184,7 +184,7 @@
           <button
               class="btn btn--next"
               @click.prevent="nextForm">
-            Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+            Próximo<i class="icon-right icon-arrow-right"></i>
           </button>
         </section>
       </section>

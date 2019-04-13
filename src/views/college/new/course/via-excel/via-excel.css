@@ -42,3 +42,8 @@
   margin: 20px auto;
   width: 78%;
 }
+
+.btn--disabled {
+  cursor: not-allowed;
+  user-select: none;
+}

@@ -96,11 +96,13 @@
               class="btn btn--come-back"
               :to="{ name: 'course' }"
               @click.native="changeWildcardActive(2)">
-            <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+            <i class="icon-left icon-arrow-left"></i>Voltar
           </router-link>
           <button
               class="btn btn--next"
-              @click.prevent="saveRecord">Finalizar</button>
+              @click.prevent="saveRecord">
+            Finalizar<i class="icon-right icon-arrow-right"></i>
+          </button>
         </section>
       </section>
     </form>

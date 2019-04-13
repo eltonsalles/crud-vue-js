@@ -149,12 +149,12 @@
             class="btn btn--come-back"
             :to="{ name: 'company-data' }"
             @click.native="changeWildcardActive(0)">
-          <i class="icon-left icon-sharp-arrow_forward-24px"></i>Voltar
+          <i class="icon-left icon-arrow-left"></i>Voltar
         </router-link>
         <button
             class="btn btn--next"
             @click.prevent="nextForm">
-          Próximo<i class="icon-right icon-sharp-arrow_forward-24px"></i>
+          Próximo<i class="icon-right icon-arrow-right"></i>
         </button>
       </section>
     </section>
