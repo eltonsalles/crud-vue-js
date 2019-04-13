@@ -40,6 +40,11 @@
   padding: 1em;
 }
 
+.input-group__icon {
+  color: var(--gray-dark);
+  cursor: pointer;
+}
+
 .login-form__btns {
   display: flex;
   align-items: center;
