@@ -103,9 +103,52 @@
   &__item {
     list-style: none;
     margin: 0 5px;
+    position: relative;
   }
 }
 
 .list__item:hover .list-actions {
   display: flex;
+}
+
+.btn--small {
+  height: 28px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn--edit {
+  background: #245367;
+}
+
+.btn--delete {
+  background: #C5421F;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn--edit:before,
+.btn--delete:before,
+.btn--delete:after {
+  color: var(--gray-dark-3);
+  font-size: 15px;
+  position: absolute;
+  text-transform: capitalize;
+  top: -190px;
+}
+
+.btn--delete:after {
+  left: 73px;
+}
+
+.btn--edit:before {
+  content: 'Editar';
+}
+
+.btn--delete:before {
+  content: 'Deletar';
+}
+
+.btn--delete:after {
+  content: 'Status';
 }

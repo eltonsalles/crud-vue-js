@@ -25,13 +25,17 @@
       <li class="list__item" v-for="n in 12" :key="n">
         <ul class="list-actions">
           <li class="list-actions__item">
-            <button>Editar</button>
+            <button class="btn btn--small btn--edit">
+              <i class="icon-edit"></i>
+            </button>
           </li>
           <li class="list-actions__item">
-            <button>Deletar</button>
+            <button class="btn btn--small btn--delete">
+              <i class="icon-delete"></i>
+            </button>
           </li>
           <li class="list-actions__item">
-            <button>Status</button>
+            <m-toggle class="btn--status" :id="`status-${n}`"></m-toggle>
           </li>
         </ul>
         <figure class="figure">
@@ -46,6 +50,7 @@
 <script>
 import Breadcrumbs from '../../../components/breadcrumbs/Breadcrumbs.vue';
 import Paginate from '../../../components/paginate/Paginate.vue';
+import Toggle from '../../../components/toggle/Toggle.vue';
 
 export default {
   name: 'List',
@@ -53,6 +58,7 @@ export default {
   components: {
     'm-breadcrumbs': Breadcrumbs,
     'm-paginate': Paginate,
+    'm-toggle': Toggle,
   },
 
   data() {
