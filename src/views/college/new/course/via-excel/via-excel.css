@@ -37,13 +37,20 @@
   padding-right: 12px;
 }
 
-.btn.btn--excel,
+.upload-btn-wrapper,
 .btn.btn--manual-registration {
-  margin: 20px auto;
+  margin: 20px auto !important;
   width: 78%;
 }
 
 .btn--disabled {
   cursor: not-allowed;
   user-select: none;
+}
+
+.upload-btn-wrapper /deep/ button.btn {
+  background: var(--purple-dark);
+  border-radius: 21px;
+  color: var(--white);
+  text-transform: uppercase;
 }

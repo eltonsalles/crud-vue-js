@@ -19,7 +19,7 @@
             Baixar Excel guia</button>
         </div>
       </div>
-      <button class="btn btn--rounded-edges btn--excel">Upload de Excel</button>
+      <m-button-upload label="Upload de Excel"></m-button-upload>
     </section>
     <section class="page-content__right-part">
       <h2 class="page-content__title">Cadastrar cursos manual</h2>
@@ -59,9 +59,14 @@
 
 <script>
 import { mapActions } from 'vuex';
+import ButtonUpload from '../../../../../components/button-upload/ButtonUpload.vue';
 
 export default {
   name: 'ExcelManual',
+
+  components: {
+    'm-button-upload': ButtonUpload,
+  },
 
   methods: {
     ...mapActions(['changeWildcardActive', 'changeViaExcelOrManual']),
