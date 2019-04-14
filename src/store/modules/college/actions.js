@@ -14,6 +14,9 @@ export default {
   changeCourses(context, payload) {
     context.commit('CHANGE_COURSES', payload);
   },
+  changeLayout(context, payload) {
+    context.commit('CHANGE_LAYOUT', payload);
+  },
   resetState(context) {
     context.commit('CHANGE_RESET');
   },
