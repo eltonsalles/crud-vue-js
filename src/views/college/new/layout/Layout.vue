@@ -186,8 +186,7 @@ export default {
 
     checkLayoutObject() {
       this.$v.$reset();
-      this.layout.companyLogo = [];
-      this.layout.featuredImage = [];
+      this.layout = cloneObject(Layout.inputs);
     },
   },
 
