@@ -10,7 +10,7 @@
 }
 
 .login-background {
-  background: #FFFFFF url("../../assets/images/background.jpg") no-repeat;
+  background: #FFFFFF url("../../assets/images/background.png") no-repeat;
   background-size: cover;
 }
 
@@ -28,7 +28,6 @@
 }
 
 .login-form__img {
-  background: purple;
   height: auto;
 }
 
@@ -39,6 +38,11 @@
   justify-content: center;
   margin-top: 1em;
   padding: 1em;
+}
+
+.input-group__icon {
+  color: var(--gray-dark);
+  cursor: pointer;
 }
 
 .login-form__btns {
@@ -63,3 +67,19 @@
   width: 40%;
 }
 
+/* Ajustes Input Login */
+.input-group {
+  margin: 16px 0;
+}
+
+.input-group__field {
+  border-color: #43425D;
+  height: 56px;
+}
+
+.input-group__label {
+  color: #6D2795;
+  top: 17px;
+}
+
+/* Fim Ajustes input login */

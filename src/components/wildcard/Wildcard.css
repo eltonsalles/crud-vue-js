@@ -1,0 +1,61 @@
+/* Variáveis */
+$triangle: 21px;
+
+.wildcard {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wildcard__item {
+  align-items: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--purple);
+  color: var(--purple);
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  width: 25%;
+}
+
+.wildcard__item:first-of-type {
+  border-top-left-radius: 5px;
+}
+
+.wildcard__item:last-of-type {
+  margin-right: 20px;
+  border-top-right-radius: 5px;
+}
+
+  .wildcard__item--previous {
+    background: var(--purple-dark);
+    color: var(--white);
+    position: relative;
+    z-index: 3;
+  }
+
+  .wildcard__item--previous:after {
+    position: absolute;
+    right: -$triangle;
+    content: "";
+    border-top: $triangle solid transparent;
+    border-bottom: $triangle solid transparent;
+    border-left: $triangle solid var(--purple-dark);
+  }
+
+  .wildcard__item--active {
+    background: var(--purple);
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+  }
+
+  .wildcard__item--active:not(:last-of-type):after {
+    position: absolute;
+    right: -$triangle;
+    content: "";
+    border-top: $triangle solid transparent;
+    border-bottom: $triangle solid transparent;
+    border-left: $triangle solid var(--purple);
+  }

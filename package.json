@@ -9,9 +9,16 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "normalize.css": "^8.0.1",
     "vue": "^2.5.21",
+    "vue-enhanced-check": "^1.5.3",
     "vue-router": "^3.0.1",
+    "vue-select": "^2.6.3",
+    "vue-sweetalert2": "^1.6.4",
+    "vue-the-mask": "^0.11.1",
+    "vuejs-paginate": "^2.1.0",
+    "vuelidate": "^0.7.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

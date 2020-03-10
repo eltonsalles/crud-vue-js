@@ -1,9 +1,12 @@
 import Vue from 'vue';
+import VueTheMask from 'vue-the-mask';
+import VueSweetalert2 from 'vue-sweetalert2';
+import Vuelidate from 'vuelidate';
 import App from './App.vue';
 import router from './router';
 import store from './store/store';
 import 'normalize.css/normalize.css';
-import './assets/css/style.css';
+import './assets/css/global.css';
 import './assets/fonts/fonts.css';
 import './assets/icons/style.css';
 
@@ -19,6 +22,10 @@ router.beforeEach((to, from, next) => {
 
   return next();
 });
+
+Vue.use(VueTheMask);
+Vue.use(Vuelidate);
+Vue.use(VueSweetalert2);
 
 new Vue({
   router,
