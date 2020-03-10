@@ -1,0 +1,73 @@
+.font--status {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 2.125rem;
+}
+
+.font--headline {
+  font-size: 2.1875rem;
+  font-weight: bold;
+  line-height: 1.3125rem;
+}
+
+.font--header {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.font--title {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+.font--large-body {
+  font-size: 1.125rem;
+  line-height: 0.8125rem;
+}
+
+.font--button {
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
+}
+
+.font--secondary-body {
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
+}
+
+.font--secondary-body-bold {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  line-height: 1.5625rem;
+}
+
+.font--body {
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+}
+
+.font--body-bold {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+.font--placeholder {
+  font-size: 0.6875rem;
+  line-height: 0.8125rem;
+}
+
+.font--paragraph-body {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+
+.font--paragraph-small-body {
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+}
+
+.font--paragraph-large-body {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}

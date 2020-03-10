@@ -1,0 +1,45 @@
+.table-striped {
+  border-collapse: unset;
+  border-spacing: 0;
+  font-size: 0.8125em;
+  width: 100%;
+}
+
+.table-striped thead th {
+  border-top: 0.0625em solid #E6E6E6;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.table-striped thead th:first-of-type {
+  border-left: 0.0625em solid #E6E6E6;
+}
+
+.table-striped thead th:last-of-type {
+  border-right: 0.0625em solid #E6E6E6;
+}
+
+.table-striped tbody tr:last-of-type td {
+  border-bottom: 0.0625em solid #E6E6E6;
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background: #FFFFFF;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: #F8F8F8;
+}
+
+.table-striped tbody tr td {
+  border-top: 0.0625em solid #E6E6E6;
+  padding: 0.75em;
+}
+
+.table-striped tbody tr td:first-of-type {
+  border-left: 0.0625em solid #E6E6E6;
+}
+
+.table-striped tbody tr td:last-of-type {
+  border-right: 0.0625em solid #E6E6E6;
+}

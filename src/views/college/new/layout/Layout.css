@@ -1,0 +1,13 @@
+.input-color {
+  background-color: unset;
+  border: none;
+  border-radius: 5px;
+  height: 42px;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.page-content__title--logo {
+  margin-bottom: 10px;
+}

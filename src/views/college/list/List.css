@@ -1,0 +1,154 @@
+.list-header {
+  display: flex;
+  margin-top: 11px;
+}
+
+.list-header > * {
+  flex: 1;
+}
+
+.list-inputs {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  .input-group {
+    margin: unset;
+    width: 50%;
+
+    .input-group__field {
+      border-radius: 16px;
+    }
+
+    .input-group__icon {
+      top: 12px;
+    }
+  }
+
+  .btn-new-faculty {
+    background: var(--purple);
+    border-radius: 21px;
+    height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .btn-filter {
+    background: var(--purple);
+    border-radius: 50%;
+    height: 42px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .input-group {
+    margin-right: 20px;
+  }
+
+  .btn-new-faculty {
+    margin-right: 10px;
+  }
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  &__item {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 10px 0 10px 10px;
+    padding: 20px 0;
+    position: relative;
+    width: calc(25% - 10px);
+
+    &:nth-of-type(4n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
+.figure {
+  margin: 0;
+
+  &__img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.list-actions {
+  align-items: center;
+  background: var(--white);
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &__item {
+    list-style: none;
+    margin: 0 5px;
+    position: relative;
+  }
+}
+
+.list__item:hover .list-actions {
+  display: flex;
+}
+
+.btn--small {
+  height: 28px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn--edit {
+  background: #245367;
+}
+
+.btn--delete {
+  background: #C5421F;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn--edit:before,
+.btn--delete:before,
+.btn--delete:after {
+  color: var(--gray-dark-3);
+  font-size: 15px;
+  position: absolute;
+  text-transform: capitalize;
+  top: -190px;
+}
+
+.btn--delete:after {
+  left: 73px;
+}
+
+.btn--edit:before {
+  content: 'Editar';
+}
+
+.btn--delete:before {
+  content: 'Deletar';
+}
+
+.btn--delete:after {
+  content: 'Status';
+}

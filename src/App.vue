@@ -1,31 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="container-fluid">
+    <header v-if="authenticated" class="header">
+      <m-header></m-header>
+    </header>
+    <aside v-if="authenticated" class="sidebar">
+      <m-aside></m-aside>
+    </aside>
+    <main :class="authenticated ? 'content' : 'content-login'">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+import Header from './components/header/Header.vue';
+import Aside from './components/aside/Aside.vue';
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+  name: 'App',
+  components: {
+    'm-header': Header,
+    'm-aside': Aside,
+  },
+  computed: {
+    authenticated() {
+      return this.$store.state.authenticated;
+    },
+  },
+};
+</script>
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="postcss">
+  .content-login {
+    width: 100%;
+  }
 </style>

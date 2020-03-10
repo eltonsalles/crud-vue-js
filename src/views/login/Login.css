@@ -1,0 +1,85 @@
+.login {
+  align-items: center;
+  display: flex;
+}
+
+.login-background,
+.login-form {
+  flex: 1 50%;
+  height: 100vh;
+}
+
+.login-background {
+  background: #FFFFFF url("../../assets/images/background.png") no-repeat;
+  background-size: cover;
+}
+
+.login-form {
+  align-items: center;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form__img,
+.login-form__form {
+  width: 50%;
+}
+
+.login-form__img {
+  height: auto;
+}
+
+.login-form__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.input-group__icon {
+  color: var(--gray-dark);
+  cursor: pointer;
+}
+
+.login-form__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.login-form__forgot-password {
+  color: #43425D;
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  width: 45%;
+}
+
+.btn--login {
+  font-size: 15px;
+  font-weight: bold;
+  width: 40%;
+}
+
+/* Ajustes Input Login */
+.input-group {
+  margin: 16px 0;
+}
+
+.input-group__field {
+  border-color: #43425D;
+  height: 56px;
+}
+
+.input-group__label {
+  color: #6D2795;
+  top: 17px;
+}
+
+/* Fim Ajustes input login */

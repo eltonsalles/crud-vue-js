@@ -1,0 +1,45 @@
+.checkbox-group {
+  margin: 0 4px;
+}
+
+.checkbox-group /deep/ .enhancedCheck.enhancedCheck-checkbox-group__item label {
+  background: #CDCDCD;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+  height: 22px;
+  line-height: 22px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 0.75em;
+}
+
+.checkbox-group.checkbox-group--error /deep/ .enhancedCheck.enhancedCheck-checkbox-group__item label {
+  box-shadow: inset 0 0 0 1px var(--danger);
+  color: var(--danger)
+}
+
+.checkbox-group /deep/ .enhancedCheck.enhancedCheck-checkbox-group__item--active label {
+  background: #9C79B9;
+  color: #FFFFFF;
+  padding-right: 15px;
+  padding-left: 35px;
+  transition: all 300ms;
+}
+
+.checkbox-group /deep/ .enhancedCheck.enhancedCheck-checkbox-group__item input[type="checkbox"] + label:before {
+  background: #CDCDCD;
+  bottom: 4px;
+  color: transparent;
+  left: 4px;
+  line-height: 220%;
+  right: 4px;
+  top: 4px;
+  width: 0;
+}
+
+.checkbox-group /deep/ .enhancedCheck.enhancedCheck-checkbox-group__item--active input[type="checkbox"] + label:before {
+  color: #FFFFFF;
+  background: #844FA6;
+  width: 25px;
+  transition: all 300ms;
+}
